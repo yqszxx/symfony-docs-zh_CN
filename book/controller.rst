@@ -1,18 +1,12 @@
 .. index::
    single: Controller
 
-Controller
-==========
+控制器（Controller）
+========================
 
-A controller is a PHP callable you create that takes information from the
-HTTP request and constructs and returns an HTTP response (as a Symfony
-``Response`` object). The response could be an HTML page, an XML document,
-a serialized JSON array, an image, a redirect, a 404 error or anything else
-you can dream up. The controller contains whatever arbitrary logic *your
-application* needs to render the content of a page.
+控制器是一段可以被调用的 PHP 代码，它从 HTTP 请求中获取信息，并且相应地构造和返回一个 HTTP 响应（作为 Symfony 的 ``Response`` 对象）。 响应可以是一个 HTML 页面，可以是一个 XML 文件，或是一个序列化了的 JSON 数组，或是一张图片，也可以是一个重定向甚至一个 404 错误，它可以是你能想到的一切！控制器将包含 *你的程序* 所需的一切渲染页面内容的逻辑。
 
-See how simple this is by looking at a Symfony controller in action.
-This renders a page that prints the famous ``Hello world!``::
+通过看这个 Symfony 控制器来了解这一切是多么的简单吧！这是一个渲染著名的 ``Hello world!`` 页面的控制器::
 
     use Symfony\Component\HttpFoundation\Response;
 
@@ -21,74 +15,64 @@ This renders a page that prints the famous ``Hello world!``::
         return new Response('Hello world!');
     }
 
-The goal of a controller is always the same: create and return a ``Response``
-object. Along the way, it might read information from the request, load a
-database resource, send an email, or set information on the user's session.
-But in all cases, the controller will eventually return the ``Response`` object
-that will be delivered back to the client.
+控制器的目标永远都是明确的：创建并返回一个 ``Response`` 对象。在这个过程中，控制器可能会从请求（Request）中读取一些信息，载入几个数据库资源，发送一封电子邮件，或者在用户会话（Session）中写入一些东西。但不论在哪一种情况下，控制器最终都要返回将要发回客户端的 ``Response`` 对象。
 
-There's no magic and no other requirements to worry about! Here are a few
-common examples:
+这里面没有魔法，也没有需要你担心的其他需求~这儿有一些简单的例子：
 
-* *Controller A* prepares a ``Response`` object representing the content
-  for the homepage of the site.
+* *控制器 A* 要创建一个 ``Response`` 对象来展现
+  网站主页的内容。
 
-* *Controller B* reads the ``slug`` parameter from the request to load a
-  blog entry from the database and create a ``Response`` object displaying
-  that blog. If the ``slug`` can't be found in the database, it creates and
-  returns a ``Response`` object with a 404 status code.
+* *控制器 B* 从用户请求中读取 ``slug`` 参数来从数据库中加载
+  博客的条目然后创建一个 ``Response`` 对象来把博客的内容显示
+  出来。如果数据库中没有 ``slug`` ，控制器就创建一个
+  包含 404 状态码的 ``Response`` 对象并把它发送回客户端。
 
-* *Controller C* handles the form submission of a contact form. It reads
-  the form information from the request, saves the contact information to
-  the database and emails the contact information to you. Finally, it creates
-  a ``Response`` object that redirects the client's browser to the contact
-  form "thank you" page.
+* *控制器 C* 来处理一个联系表格的表单子任务。它从
+  用户请求中读取信息，存储在
+  数据库中并给你发送一封包含联系信息的电子邮件。最后，它创建
+  一个 ``Response`` 对象来把用户的浏览器重定向到
+  表单的“谢谢您”页面。
 
 .. index::
    single: Controller; Request-controller-response lifecycle
 
-Requests, Controller, Response Lifecycle
-----------------------------------------
+请求（Requests）、控制器（Controller）、响应（Response）生命周期
+-------------------------------------------------------------------------------------------------------------------------------
 
-Every request handled by a Symfony project goes through the same simple lifecycle.
-The framework takes care of all the repetitive stuff: you just need to write
-your custom code in the controller function:
+每一个 Symfony 项目处理的请求都经过这个简单的生命周期。框架将接管所有重复的活动，这意味着你只需要把你自己的特有的代码写入控制器的函数即可：
 
-#. Each request is handled by a single front controller file (e.g. ``app.php``
-   or ``app_dev.php``) that bootstraps the application;
+#. 每个请求都被交给一个单一的前端控制器（Front Controller）处理并引导整个程序（如 ``app.php``
+   或 ``app_dev.php``）；
 
-#. The ``Router`` reads information from the request (e.g. the URI), finds
-   a route that matches that information, and reads the ``_controller`` parameter
-   from the route;
+#. ``Router（路由器）`` 从请求中读取信息（比如 URI)，并
+   寻找一条符合这个信息的路由，然后读取路由信息中的 ``_controller`` 
+   参数；
 
-#. The controller from the matched route is executed and the code inside the
-   controller creates and returns a ``Response`` object;
+#. 被命中的路由信息中给出的控制器将被执行，控制器中的代码将
+   创建并返回一个 ``Response`` 对象；
 
-#. The HTTP headers and content of the ``Response`` object are sent back to
-   the client.
+#. ``Response`` 对象中的 HTTP 头和内容将被送回
+   客户端。
 
-Creating a page is as easy as creating a controller (#3) and making a route that
-maps a URL to that controller (#2).
+创建一个页面简单到只需要创建一个控制器（第三步中用到），再添加一条路由将 URL 映射到控制器上（第二步中用到）。
 
 .. note::
 
-    Though similarly named, a "front controller" is different from the
-    "controllers" talked about in this chapter. A front controller
-    is a short PHP file that lives in your web directory and through which
-    all requests are directed. A typical application will have a production
-    front controller (e.g. ``app.php``) and a development front controller
-    (e.g. ``app_dev.php``). You'll likely never need to edit, view or worry
-    about the front controllers in your application.
+    虽然名字很像，但“前端控制器”和本章讨论的“控制器”
+    不是同一个东西。前端控制器
+    在你网站目录下的一个短小的 PHP 文件，
+    所有的请求都被指向它。典型的程序会有一个生产环境
+    前端控制器（比如 ``app.php``）和一个开发环境前端控制器。
+    （比如 ``app_dev.php``）。你基本不需要编辑、浏览或者担心
+    你的程序中前端控制器的代码。
 
 .. index::
    single: Controller; Simple example
 
-A Simple Controller
--------------------
+一个简单的控制器
+------------------------
 
-While a controller can be any PHP callable (a function, method on an object,
-or a ``Closure``), a controller is usually a method inside a controller class.
-Controllers are also called *actions*.
+虽然刚才说到控制器可以是任何一段可以被调用的 PHP 代码（比如一个函数、对象中的方法或者一个 ``Closure（闭包）``），但控制器一般都是控制器类中的一个方法。控制器也被叫做 *Action（动作）*。
 
 .. code-block:: php
 
@@ -107,41 +91,37 @@ Controllers are also called *actions*.
 
 .. tip::
 
-    Note that the *controller* is the ``indexAction`` method, which lives
-    inside a *controller class* (``HelloController``). Don't be confused
-    by the naming: a *controller class* is simply a convenient way to group
-    several controllers/actions together. Typically, the controller class
-    will house several controllers/actions (e.g. ``updateAction``, ``deleteAction``,
-    etc).
+    注意这里的 *控制器* 是在 *控制器类*（``HelloController``）的 ``indexAction`` 方法。
+    别被
+    *控制器类* 这个名字搞糊涂了，这只是一种将几个
+    控制器（方法）组合在一起的简便方法而已。一般情况下，控制器类
+    里面会有一些控制器（比如 ``updateAction``、``deleteAction`` 
+    等等）。
 
-This controller is pretty straightforward:
+这个控制器相当明了：
 
-* *line 4*: Symfony takes advantage of PHP 5.3 namespace functionality to
-  namespace the entire controller class. The ``use`` keyword imports the
-  ``Response`` class, which the controller must return.
+* *第4行*： Symfony 使用 PHP 5.3 的命名空间这一很方便的功能来
+  命名整个控制器类。``use`` 关键字将导入
+  控制器必须返回的 ``Response`` 类。
 
-* *line 6*: The class name is the concatenation of a name for the controller
-  class (i.e. ``Hello``) and the word ``Controller``. This is a convention
-  that provides consistency to controllers and allows them to be referenced
-  only by the first part of the name (i.e. ``Hello``) in the routing configuration.
+* *第6行*：类名是在你给控制器类起的名字
+  （比如 ``Hello``）后面加上 ``Controller`` 这个单词构成的。这个规范
+  保持控制器的一致性并且将允许你只使用
+  类名的第一个部分 （在这里是 ``Hello``）来配置路由。
 
-* *line 8*: Each action in a controller class is suffixed with ``Action``
-  and is referenced in the routing configuration by the action's name (``index``).
-  In the next section, you'll create a route that maps a URI to this action.
-  You'll learn how the route's placeholders (``{name}``) become arguments
-  to the action method (``$name``).
+* *第8行*：控制器类中的每一个动作都要以 ``Action`` 结尾
+  这样你就可以在配置路由时只写动作本身的名字（这里是 ``index`` ）了。  在下一节你将创建一条路由将 URL 映射到这个动作上。  你也将学到如何把路由中的占位符（这里是``{name}``）变成
+  动作的方法的参数（这里是``$name``）。
 
-* *line 10*: The controller creates and returns a ``Response`` object.
+* *第10行*：控制器创建并返回一个 ``Response`` 对象。
 
 .. index::
    single: Controller; Routes and controllers
 
-Mapping a URL to a Controller
------------------------------
+将 URL 映射到控制器上
+--------------------------------
 
-The new controller returns a simple HTML page. To actually view this page
-in your browser, you need to create a route, which maps a specific URL path
-to the controller:
+这个新控制器返回一个简单的 HTML 页面。要想真正地访问这个页面，你需要创建一条将指定 URL 路径映射到对应控制器的路由：
 
 .. configuration-block::
 
@@ -169,7 +149,7 @@ to the controller:
         # app/config/routing.yml
         hello:
             path:      /hello/{name}
-            # uses a special syntax to point to the controller - see note below
+            # 使用这种特定的表达式来指向控制器 - 参阅下面的注解
             defaults:  { _controller: AppBundle:Hello:index }
 
     .. code-block:: xml
@@ -182,7 +162,7 @@ to the controller:
                 http://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="hello" path="/hello/{name}">
-                <!-- uses a special syntax to point to the controller - see note below -->
+                <!-- 使用这种特定的表达式来指向控制器 - 参阅下面的注解 -->
                 <default key="_controller">AppBundle:Hello:index</default>
             </route>
         </routes>
@@ -195,42 +175,36 @@ to the controller:
 
         $collection = new RouteCollection();
         $collection->add('hello', new Route('/hello/{name}', array(
-            // uses a special syntax to point to the controller - see note below
+            // 使用这种特定的表达式来指向控制器 - 参阅下面的注解
             '_controller' => 'AppBundle:Hello:index',
         )));
 
         return $collection;
 
-Now, you can go to ``/hello/ryan`` (e.g. ``http://localhost:8000/app_dev.php/hello/ryan``
-if you're using the :doc:`built-in web server </cookbook/web_server/built_in>`)
-and Symfony will execute the ``HelloController::indexAction()`` controller
-and pass in ``ryan`` for the ``$name`` variable. Creating a "page" means
-simply creating a controller method and an associated route.
+好了，现在如果你访问 ``/hello/ryan`` （比如在你使用:doc:`built-in web server </cookbook/web_server/built_in>` 链接就是 ``http://localhost:8000/app_dev.php/hello/ryan``）时， Symfony 就会执行 ``HelloController::indexAction()`` 控制器并将 ``ryan`` 传入作为``$name`` 变量的值。创建“页面”的意思只是简单地创建一个控制器的方法和对应的路由。
 
-Simple, right?
+简单吧？
 
-.. sidebar:: The AppBundle:Hello:index controller syntax
+.. sidebar:: 类似 AppBundle:Hello:index 这样的表达式的语法
 
-    If you use the YML or XML formats, you'll refer to the controller using
-    a special shortcut syntax: ``AppBundle:Hello:index``. For more details
-    on the controller format, see :ref:`controller-string-syntax`.
+    如果你用 YML 或者 XML 格式，你就需要使用一种特定的
+    表达式来定位一个控制器： ``AppBundle:Hello:index``。想要详细了解
+    控制器定位表达式，请参阅 :ref:`controller-string-syntax`。
 
 .. seealso::
 
-    You can learn much more about the routing system in the
-    :doc:`Routing chapter </book/routing>`.
+    你可以从 :doc:`Routing chapter </book/routing>` 更详细地学习路由系统。
+    
 
 .. index::
    single: Controller; Controller arguments
 
 .. _route-parameters-controller-arguments:
 
-Route Parameters as Controller Arguments
+作为控制器参数的路由占位符
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You already know that the route points to the
-``HelloController::indexAction()`` method that lives inside AppBundle. What's
-more interesting is the argument that is passed to that method::
+你已经知道了路由指向了 AppBundle 中的 ``HelloController::indexAction()`` 方法。更有趣的东西是传入那个方法的参数::
 
     // src/AppBundle/Controller/HelloController.php
     // ...
@@ -244,12 +218,9 @@ more interesting is the argument that is passed to that method::
         // ...
     }
 
-The controller has a single argument, ``$name``, which corresponds to the
-``{name}`` parameter from the matched route (``ryan`` if you go to ``/hello/ryan``).
-When executing your controller, Symfony matches each argument with a parameter
-from the route. So the value for ``{name}`` is passed to ``$name``.
+控制器有一个与被命中的路由信息中的 ``{name}`` 占位符对应的参数 ``$name``（如果你访问 ``/hello/ryan`` 就是 ``ryan``）。当你的控制器被执行时，Symfony 会将控制器的参数与路由占位符一一对应。所以 ``{name}`` 的值将被传递给 ``$name``。
 
-Take the following more-interesting example:
+看一下这个更有趣的例子吧：
 
 .. configuration-block::
 
@@ -305,49 +276,48 @@ Take the following more-interesting example:
 
         return $collection;
 
-Now, the controller can have two arguments::
+现在，控制器可以有两个参数了::
 
     public function indexAction($firstName, $lastName)
     {
         // ...
     }
 
-Mapping route parameters to controller arguments is easy and flexible. Keep
-the following guidelines in mind while you develop.
+将路由占位符映射到控制器参数是简单且灵活的。在开发时请记住以下几条准则。.
 
-* **The order of the controller arguments does not matter**
+* **控制器参数与顺序无关**
 
-  Symfony matches the parameter **names** from the route to the variable
-  **names** of the controller. The arguments of the controller could be totally
-  reordered and still work perfectly::
+  Symfony 使用路由占位符的 **名字** 和控制器参数的
+  **名字** 来进行映射。控制器参数可以被完全
+  重新排序而且仍然可以完美运行::
 
       public function indexAction($lastName, $firstName)
       {
           // ...
       }
 
-* **Each required controller argument must match up with a routing parameter**
+* **控制器需要的所有参数都必须有一个路由占位符与之对应**
 
-  The following would throw a ``RuntimeException`` because there is no ``foo``
-  parameter defined in the route::
+  下面的代码将抛出一个 ``RuntimeException（运行时异常）`` 因为在路由中 ``foo``
+  这个占位符没有被定义::
 
       public function indexAction($firstName, $lastName, $foo)
       {
           // ...
       }
 
-  Making the argument optional, however, is perfectly ok. The following
-  example would not throw an exception::
+  但是将 ``foo`` 这个参数设为可选参数是可行的。下面这个
+  例子就不会抛出异常::
 
       public function indexAction($firstName, $lastName, $foo = 'bar')
       {
           // ...
       }
 
-* **Not all routing parameters need to be arguments on your controller**
+* **并不是所有的路由占位符都需要有一个控制器参数与之对应**
 
-  If, for example, the ``lastName`` weren't important for your controller,
-  you could omit it entirely::
+  如果假设 ``lastName`` 在你的控制器中并不是那么重要，
+  你可以完全忽略掉它::
 
       public function indexAction($firstName)
       {
@@ -356,21 +326,18 @@ the following guidelines in mind while you develop.
 
 .. tip::
 
-    Every route also has a special ``_route`` parameter, which is equal to
-    the name of the route that was matched (e.g. ``hello``). Though not usually
-    useful, this is also available as a controller argument. You can also
-    pass other variables from your route to your controller arguments. See
+    每一个路由也都有一个特殊的 ``_route`` 占位符，它等同于
+    被命中的路由的名字（比如在这里是 ``hello``）。虽然并不经常
+    用到,，它同样可以被用于一个控制器参数。你也可以
+    你也可以将其他来自你的路由的变量传入控制器。参阅
     :doc:`/cookbook/routing/extra_information`.
 
 .. _book-controller-request-argument:
 
-The ``Request`` as a Controller Argument
+将 ``Request`` 作为控制器参数
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-What if you need to read query parameters, grab a request header or get access
-to an uploaded file? All of that information is stored in Symfony's ``Request``
-object. To get it in your controller, just add it as an argument and
-**type-hint it with the Request class**::
+假设你需要读取一个查询参数，抓取一个请求头，或者访问一个被上传上来的文件。所有的这些信息都被存储到了 Symfony 的 ``Request（请求）`` 对象中。如果想在你的控制器中使用它，只需要将它添加为参数并 **使用Request 类对其进行类型约束（Type-Hint）** ::
 
     use Symfony\Component\HttpFoundation\Request;
 
@@ -383,21 +350,18 @@ object. To get it in your controller, just add it as an argument and
 
 .. seealso::
 
-    Want to know more about getting information from the request? See
+    想学习关于从请求中获取信息的更多？参阅
     :ref:`Access Request Information <component-http-foundation-request>`.
 
 .. index::
    single: Controller; Base controller class
 
-The Base Controller Class
+控制器基类
 -------------------------
 
-For convenience, Symfony comes with an optional base ``Controller`` class.
-If you extend it, you'll get access to a number of helper methods and all
-of your service objects via the container (see :ref:`controller-accessing-services`).
+为了更加方便，Symfony 提供了一个 ``Controller`` 基类。如果你将其继承，你就可以访问很多的帮手方法，也可以通过容器来访问你的服务（参阅 :ref:`controller-accessing-services`）。
 
-Add the ``use`` statement atop the ``Controller`` class and then modify the
-``HelloController`` to extend it::
+把 ``use`` 的声明放在 ``Controller`` 类的上面，然后修改一下 ``HelloController`` 去继承基类::
 
     // src/AppBundle/Controller/HelloController.php
     namespace AppBundle\Controller;
@@ -409,41 +373,30 @@ Add the ``use`` statement atop the ``Controller`` class and then modify the
         // ...
     }
 
-This doesn't actually change anything about how your controller works: it
-just gives you access to helper methods that the base controller class makes
-available. These are just shortcuts to using core Symfony functionality that's
-available to you with or without the use of the base ``Controller`` class.
-A great way to see the core functionality in action is to look in the
-`Controller class`_.
+这并不会实际地修改你控制器工作的任何部分：它只是可以让你访问基类提供的帮手方法。这只是一些使用 Symfony 核心功能的快捷方法，这些核心功能无论你是否使用 ``Controller`` 基类都可用。查看正在运作的核心功能的方法就是看看`Controller class`_。
 
 .. seealso::
 
-    If you're curious about how a controller would work that did *not* extend
-    this base class, check out :doc:`Controllers as Services </cookbook/controller/service>`.
-    This is optional, but can give you more control over the exact objects/dependencies
-    that are injected into your controller.
+    如果你很好奇控制器在 *不* 继承
+    这个基类时如何工作，请参阅 :doc:`Controllers as Services </cookbook/controller/service>`。    这是可选的，但可以让你更精确地控制注入到你控制器中的
+    类或者依赖。
 
 .. index::
    single: Controller; Redirecting
 
-Redirecting
+重定向
 ~~~~~~~~~~~
 
-If you want to redirect the user to another page, use the
-:method:`Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller::redirect`
-method::
+如果你想将用户重定向到另一个页面，请使用 :method:`Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller::redirect` 方法 ::
 
     public function indexAction()
     {
         return $this->redirect($this->generateUrl('homepage'));
     }
 
-The ``generateUrl()`` method is just a helper function that generates the URL
-for a given route. For more information, see the :doc:`Routing </book/routing>`
-chapter.
+上面的 ``generateUrl()`` 方法只是一个生成给定路由的 URL 的帮手方法。获取更多信息，请参阅 :doc:`Routing </book/routing>` 章节。
 
-By default, the ``redirect()`` method performs a 302 (temporary) redirect. To
-perform a 301 (permanent) redirect, modify the second argument::
+在默认情况下， ``redirect()`` 方法生成的是 302（暂时）重定向。要想生成 301（永久）重定向，请修改第二个参数 ::
 
     public function indexAction()
     {
@@ -452,8 +405,8 @@ perform a 301 (permanent) redirect, modify the second argument::
 
 .. tip::
 
-    The ``redirect()`` method is simply a shortcut that creates a ``Response``
-    object that specializes in redirecting the user. It's equivalent to::
+    上面提到的 ``redirect()`` 方法只是一个创建专门重定向用户的 ``Response``
+    类的快捷方式。它等价于::
 
         use Symfony\Component\HttpFoundation\RedirectResponse;
 
@@ -464,48 +417,40 @@ perform a 301 (permanent) redirect, modify the second argument::
 
 .. _controller-rendering-templates:
 
-Rendering Templates
+渲染模板
 ~~~~~~~~~~~~~~~~~~~
 
-If you're serving HTML, you'll want to render a template. The ``render()``
-method renders a template **and** puts that content into a ``Response``
-object for you::
+如果你要使用 HTML，你就一定要渲染模板。一个叫做 ``render()`` 的方法会渲染一个模板 **并且** 为你把内容放入 ``Response`` 类中::
 
-    // renders app/Resources/views/Hello/index.html.twig
+    // 渲染 app/Resources/views/Hello/index.html.twig
     return $this->render('Hello/index.html.twig', array('name' => $name));
 
-You can also put templates in deeper sub-directories. Just try to avoid creating
-unnecessarily deep structures::
+你也可以将模板文件放入更深的子文件夹中。但还是要避免创建不必要的更深的结构::
 
-    // renders app/Resources/views/Hello/Greetings/index.html.twig
+    // 渲染 app/Resources/views/Hello/Greetings/index.html.twig
     return $this->render('Hello/Greetings/index.html.twig', array('name' => $name));
 
-The Symfony templating engine is explained in great detail in the
-:doc:`Templating </book/templating>` chapter.
+在 :doc:`Templating </book/templating>` 一章详细讲解了 Symfony 模板引擎。
 
-.. sidebar:: Referencing Templates that Live inside the Bundle
+.. sidebar:: 使用储存在包内部的模板
 
-    You can also put templates in the ``Resources/views`` directory of a
-    bundle and reference them with a
-    ``BundleName:DirectoryName:FileName`` syntax. For example,
-    ``AppBundle:Hello:index.html.twig`` would refer to the template located in
-    ``src/AppBundle/Resources/views/Hello/index.html.twig``. See :ref:`template-referencing-in-bundle`.
+    你也可以将模板放入一个包内的 ``Resources/views`` 目录下，
+    并使用
+    ``包名:目录名:文件名`` 这样的表达式来使用它。例如，
+    ``AppBundle:Hello:index.html.twig`` 代表的是 
+    ``src/AppBundle/Resources/views/Hello/index.html.twig`` 这个模板文件。参阅 :ref:`template-referencing-in-bundle`。
 
 .. index::
    single: Controller; Accessing services
 
 .. _controller-accessing-services:
 
-Accessing other Services
+访问其他服务
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Symfony comes packed with a lot of useful objects, called services. These
-are used for rendering templates, sending emails, querying the database and
-any other "work" you can think of. When you install a new bundle, it probably
-brings in even *more* services.
+Symfony 打包了很多有用的类，它们被称为服务。这些服务被用来渲染模板、发送邮件、查询数据库，也可以用来做一些你想让它们“做”的工作。当你安装新的包时，它可能会引入 *更多的* 服务。
 
-When extending the base controller class, you can access any Symfony service
-via the ``get()`` method. Here are several common services you might need::
+当你继承了控制器基类时，你就可以通过 ``get()`` 方法来访问任何的 Symfony 服务。这里有一些你可能会用到的基本服务::
 
     $templating = $this->get('templating');
 
@@ -513,69 +458,56 @@ via the ``get()`` method. Here are several common services you might need::
 
     $mailer = $this->get('mailer');
 
-What other services exist? You can list all services, use the ``container:debug``
-console command:
+那么别的服务在哪儿呢？你可以用 ``container:debug`` 这个控制台命令列出所有的服务：
 
 .. code-block:: bash
 
     $ php app/console container:debug
 
-For more information, see the :doc:`/book/service_container` chapter.
+更多信息，请参阅 :doc:`/book/service_container` 一章。
 
 .. index::
    single: Controller; Managing errors
    single: Controller; 404 pages
 
-Managing Errors and 404 Pages
------------------------------
+管理错误和 404 页面
+------------------------------------------------
 
-When things are not found, you should play well with the HTTP protocol and
-return a 404 response. To do this, you'll throw a special type of exception.
-If you're extending the base controller class, do the following::
+当没有找到一些东西事，你应该用好 HTTP 协议并返回一个 404 响应。为了达到目的，你可以抛出一个特殊的异常。如果你继承了控制器基类，按照下面的来做::
 
     public function indexAction()
     {
-        // retrieve the object from database
+        // 从数据库中检索目标
         $product = ...;
         if (!$product) {
-            throw $this->createNotFoundException('The product does not exist');
+            throw $this->createNotFoundException('产品不存在');
         }
 
         return $this->render(...);
     }
 
-The ``createNotFoundException()`` method is just a shortcut to create a
-special :class:`Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException`
-object, which ultimately triggers a 404 HTTP response inside Symfony.
+上面用到的 ``createNotFoundException()`` 方法只是一个创建特殊的 :class:`Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException` 对象（一个创建 HTTP 404 响应的 Symfony 类）的快捷方式。
 
-Of course, you're free to throw any ``Exception`` class in your controller -
-Symfony will automatically return a 500 HTTP response code.
+当然，你可以自由的从你的控制器中抛出任何 ``Exception（异常）`` 类——Symfony 将会自动的生成 HTTP 500（内部服务器错误）响应。
 
 .. code-block:: php
 
-    throw new \Exception('Something went wrong!');
+    throw new \Exception('出错了！');
 
-In every case, an error page is shown to the end user and a full debug
-error page is shown to the developer (i.e. when you're using ``app_dev.php`` -
-see :ref:`page-creation-environments`).
+任何情况下，最终用户看到的都是错误页面，开发者看到的都是完整的调试信息 （例如当你使用 ``app_dev.php``时——参阅 :ref:`page-creation-environments`）。
 
-You'll want to customize the error page your user sees. To do that, see the
-":doc:`/cookbook/controller/error_pages`" cookbook recipe.
+你一定想自定义终端用户看到的错误页面。为达到目的，请参阅技巧书中的 ":doc:`/cookbook/controller/error_pages`" 这一技巧。
 
 .. index::
    single: Controller; The session
    single: Session
 
-Managing the Session
+管理会话
 --------------------
 
-Symfony provides a nice session object that you can use to store information
-about the user (be it a real person using a browser, a bot, or a web service)
-between requests. By default, Symfony stores the attributes in a cookie
-by using the native PHP sessions.
+Symfony 提供一个很好用的会话类，你可以用它在请求间存储用户（可以是一个使用浏览器的真实的人类，或是一个蜘蛛机器人，或是一个网络服务）的信息。默认情况下，Symfony 使用 PHP 原生的会话管理工具将这些信息储存在 Cookie 中。
 
-Storing and retrieving information from the session can be easily achieved
-from any controller::
+不管在哪个控制器中，向会话写入信息和从会话中读取信息都可以轻易实现::
 
     use Symfony\Component\HttpFoundation\Request;
 
@@ -583,31 +515,27 @@ from any controller::
     {
         $session = $request->getSession();
 
-        // store an attribute for reuse during a later user request
+        // 存储一个在处理用户之后的请求时会用到的属性
         $session->set('foo', 'bar');
 
-        // get the attribute set by another controller in another request
+        // 获取在别的会话中别的控制器设置的属性
         $foobar = $session->get('foobar');
 
-        // use a default value if the attribute doesn't exist
+        // 在属性不存在时使用一个默认值
         $filters = $session->get('filters', array());
     }
 
-These attributes will remain on the user for the remainder of that user's
-session.
+这些属性将持续到用户其余的请求中。
 
 .. index::
    single: Session; Flash messages
 
-Flash Messages
+闪电消息
 ~~~~~~~~~~~~~~
 
-You can also store small messages that will be stored on the user's session
-for exactly one additional request. This is useful when processing a form:
-you want to redirect and have a special message shown on the *next* page.
-These types of messages are called "flash" messages.
+你也可以向用户会话存储一条只在紧接着的下一个请求中可用的短消息。这在处理表格时很有用：你想将用户重定向并在 *下一个* 页面中显示一条特定的消息。这种消息被称为“闪电”消息。
 
-For example, imagine you're processing a form submit::
+设想你正在处理一个提交上来的表格::
 
     use Symfony\Component\HttpFoundation\Request;
 
@@ -618,11 +546,11 @@ For example, imagine you're processing a form submit::
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            // do some sort of processing
+            // 做一些处理
 
             $request->getSession()->getFlashBag()->add(
                 'notice',
-                'Your changes were saved!'
+                '更改已保存！'
             );
 
             return $this->redirect($this->generateUrl(...));
@@ -631,12 +559,9 @@ For example, imagine you're processing a form submit::
         return $this->render(...);
     }
 
-After processing the request, the controller sets a ``notice`` flash message
-in the session and then redirects. The name (``notice``) isn't significant -
-it's just something you invent and reference next.
+处理完请求后，控制器在会话中设置了一个叫做 ``notice`` 的闪电消息并重定向。名字（上面的例子里是``notice``）并没有特殊的意义，只是个你起的名字，方便你在下一步中使用它。
 
-In the template of the next page (or even better, in your base layout template),
-the following code will render the ``notice`` message:
+在下一个页面中的模板里（更聪明的方法是写入主模板框架），下面的代码将渲染 ``notice`` 这个消息。
 
 .. configuration-block::
 
@@ -656,102 +581,82 @@ the following code will render the ``notice`` message:
             </div>
         <?php endforeach ?>
 
-By design, flash messages are meant to live for exactly one request (they're
-"gone in a flash"). They're designed to be used across redirects exactly as
-you've done in this example.
+闪电消息被专门设计为只能在紧接着的请求中使用（它们像闪电一样转瞬即逝）。像刚才这样在重定向时传递消息就可以用到闪电消息。
 
 .. index::
    single: Controller; Response object
 
-The Response Object
--------------------
+Response（响应）对象
+----------------------------------------------
 
-The only requirement for a controller is to return a ``Response`` object. The
-:class:`Symfony\\Component\\HttpFoundation\\Response` class is an abstraction
-around the HTTP response: the text-based message filled with headers and
-content that's sent back to the client::
+对控制器的要求只有一个：返回一个 ``Response`` 对象。Symfony 中的 :class:`Symfony\\Component\\HttpFoundation\\Response` 类是对 HTTP 响应的抽象：响应头和内容被填入基于文本的消息中发回客户端::
 
     use Symfony\Component\HttpFoundation\Response;
 
-    // create a simple Response with a 200 status code (the default)
+    // 创建一个有 200 状态码（默认）的简单响应
     $response = new Response('Hello '.$name, 200);
 
-    // create a JSON-response with a 200 status code
+    // 创建一个有 200 状态码（默认）的 JSON 响应
     $response = new Response(json_encode(array('name' => $name)));
     $response->headers->set('Content-Type', 'application/json');
 
-The ``headers`` property is a :class:`Symfony\\Component\\HttpFoundation\\HeaderBag`
-object and has some nice methods for getting and setting the headers. The
-header names are normalized so that using ``Content-Type`` is equivalent to
-``content-type`` or even ``content_type``.
+上面的 ``headers`` 属性是一个 :class:`Symfony\\Component\\HttpFoundation\\HeaderBag` 类，它有一些很棒的读写响应头的方法。响应头的名字是标准化了的，所以用 ``Content-Type`` 等价于 ``content-type`` 或者 ``content_type``。
 
-There are also special classes to make certain kinds of responses easier:
+也有一些可以简单快速地创建其他类型的响应的类。
 
-* For JSON, there is :class:`Symfony\\Component\\HttpFoundation\\JsonResponse`.
-  See :ref:`component-http-foundation-json-response`.
+* JSON对应的类是 :class:`Symfony\\Component\\HttpFoundation\\JsonResponse`。  参阅 :ref:`component-http-foundation-json-response`。
 
-* For files, there is :class:`Symfony\\Component\\HttpFoundation\\BinaryFileResponse`.
-  See :ref:`component-http-foundation-serving-files`.
+* 文件对应的类是 :class:`Symfony\\Component\\HttpFoundation\\BinaryFileResponse`。  参阅 :ref:`component-http-foundation-serving-files`。
 
-* For streamed responses, there is :class:`Symfony\\Component\\HttpFoundation\\StreamedResponse`.
-  See :ref:`streaming-response`.
+* 流式响应对应的类在 :class:`Symfony\\Component\\HttpFoundation\\StreamedResponse`。  参阅 :ref:`streaming-response`。
 
 .. seealso::
 
-    Don't worry! There is a lot more information about the Response object
-    in the component documentation. See :ref:`component-http-foundation-response`.
+    别担心！在足见的文档里还有很多关于响应对象的
+    信息。参阅 :ref:`component-http-foundation-response`。
 
 .. index::
    single: Controller; Request object
 
-The Request Object
-------------------
+请求（Request）对象
+--------------------------------------------
 
-Besides the values of the routing placeholders, the controller also has access
-to the ``Request`` object. The framework injects the ``Request`` object in the
-controller if a variable is type-hinted with
-:class:`Symfony\\Component\\HttpFoundation\\Request`::
+除了来自路由占位符的值，控制器还可以访问 ``Request（请求）`` 对象。如果一个变量被使用 :class:`Symfony\\Component\\HttpFoundation\\Request` 进行类型约束，框架就会将 ``请求`` 对象注入控制器中::
 
     use Symfony\Component\HttpFoundation\Request;
 
     public function indexAction(Request $request)
     {
-        $request->isXmlHttpRequest(); // is it an Ajax request?
+        $request->isXmlHttpRequest(); // 是一个Ajax请求吗？
 
         $request->getPreferredLanguage(array('en', 'fr'));
 
-        $request->query->get('page'); // get a $_GET parameter
+        $request->query->get('page'); // 获取一个 $_GET 的参数
 
-        $request->request->get('page'); // get a $_POST parameter
+        $request->request->get('page'); // 获取一个 $_POST 的参数
     }
 
-Like the ``Response`` object, the request headers are stored in a ``HeaderBag``
-object and are easily accessible.
+就像 ``响应`` 对象一样，请求头被存储在 ``HeaderBag（请求头包）`` 对象中，访问起来很容易。
 
 .. seealso::
 
-    Don't worry! There is a lot more information about the Request object
-    in the component documentation. See :ref:`component-http-foundation-request`.
+    别担心！在足见的文档里还有很多关于请求对象的
+    信息。参阅 :ref:`component-http-foundation-request`。
 
-Creating Static Pages
----------------------
+创建静态页面
+------------------------------
 
-You can create a static page without even creating a controller (only a route
-and template are needed).
+你也可以创建一个不需要控制器的静态页面（只需要路由和模板）。
 
-See :doc:`/cookbook/templating/render_without_controller`.
+参阅 :doc:`/cookbook/templating/render_without_controller`。
 
 .. index::
    single: Controller; Forwarding
 
-Forwarding to Another Controller
---------------------------------
+重定向到另一个控制器
+-----------------------------------------------
 
-Though not very common, you can also forward to another controller internally
-with the :method:`Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller::forward`
-method. Instead of redirecting the user's browser, it makes an internal sub-request,
-and calls the controller. The ``forward()`` method returns the ``Response``
-object that's returned from *that* controller::
+虽然不是很常用，但你还是可以使用 :method:`Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller::forward` 这一方法来在内部重定向到别的控制器。这样做并不会重定向用户的浏览器，而会建立一个内部子请求并调用对应的控制器。刚才提到的 ``forward()`` 方法会返回一个来自 *那个（重定向到的）* 控制器的 ``Response`` 对象::
 
     public function indexAction($name)
     {
@@ -760,49 +665,31 @@ object that's returned from *that* controller::
             'color' => 'green',
         ));
 
-        // ... further modify the response or return it directly
+        // ... 做一些别的更改或者直接返回它
 
         return $response;
     }
 
-Notice that the ``forward()`` method uses a special string representation
-of the controller (see :ref:`controller-string-syntax`). In this case, the
-target controller function will be ``SomethingController::fancyAction()``
-inside the AppBundle. The array passed to the method becomes the arguments on
-the resulting controller. This same idea is used when embedding controllers
-into templates (see :ref:`templating-embedding-controller`). The target
-controller method would look something like this::
+请注意 ``forward()`` 方法使用一种特殊的控制器定位表达式（参阅 :ref:`controller-string-syntax`）。在这个例子中，目标控制器是 AppBundle 中的 ``SomethingController::fancyAction()`` 控制器。作为方法的参数的数组将会被作为控制器参数传入目标控制器。在将控制器嵌入模板时也会用到这一方法（参阅 :ref:`templating-embedding-controller`）。目标控制器可以像下面这样工作::
 
     public function fancyAction($name, $color)
     {
-        // ... create and return a Response object
+        // ... 创建并返回一个 Response 对象
     }
 
-Just like when creating a controller for a route, the order of the arguments of
-``fancyAction`` doesn't matter. Symfony matches the index key names (e.g.
-``name``) with the method argument names (e.g. ``$name``). If you change the
-order of the arguments, Symfony will still pass the correct value to each
-variable.
+就像在给路由创建控制器时那样， ``fancyAction`` 的参数的顺序并不影响运行。Symfony 会将数组的键名（比如 ``name``）与控制器方法的参数名（比如 ``$name``）对应起来。如果你更改了参数的顺序，Symfony 还是会将正确的值传递给各个变量。
 
-Final Thoughts
+结语
 --------------
 
-Whenever you create a page, you'll ultimately need to write some code that
-contains the logic for that page. In Symfony, this is called a controller,
-and it's a PHP function where you can do anything in order to return the
-final ``Response`` object that will be returned to the user.
+不论在什么时候，当你创建一个页面时，你最终都需要写一些包括这个页面的逻辑的代码。在 Symfony 里，这被称为控制器，并且它是一个可以为了返回最终会被返回给用户的 ``Response`` 对象而做任何事的 PHP 函数。
 
-To make life easier, you can choose to extend a base ``Controller`` class,
-which contains shortcut methods for many common controller tasks. For example,
-since you don't want to put HTML code in your controller, you can use
-the ``render()`` method to render and return the content from a template.
+简单起见，你可以选择继承 ``Controller`` 基类，它包含了很多控制器要做的基本的事情的快捷方式。比如，因为你不想在控制器里写 HTML 代码，你就可以用 ``render()`` 方法来从模板中渲染内容并返回。
 
-In other chapters, you'll see how the controller can be used to persist and
-fetch objects from a database, process form submissions, handle caching and
-more.
+在别的章节中，你将学到控制器如何将对象持久化到数据库中或从数据库中获取对象、在子任务中处理、处理缓存还有更多更多。
 
-Learn more from the Cookbook
-----------------------------
+从技巧书中再学一些
+-------------------------------------------------------
 
 * :doc:`/cookbook/controller/error_pages`
 * :doc:`/cookbook/controller/service`
