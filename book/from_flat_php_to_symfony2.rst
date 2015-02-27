@@ -1,29 +1,20 @@
 .. _symfony2-versus-flat-php:
 
-Symfony versus Flat PHP
-=======================
+使用 Symfony 与不使用框架的对比
+=====================================
 
-**Why is Symfony better than just opening up a file and writing flat PHP?**
+**为什么用 Symfony 开发比打开一个文件直接写 PHP 代码更好？**
 
-If you've never used a PHP framework, aren't familiar with the MVC philosophy,
-or just wonder what all the *hype* is around Symfony, this chapter is for
-you. Instead of *telling* you that Symfony allows you to develop faster and
-better software than with flat PHP, you'll see for yourself.
+如果你没有接触过 PHP 框架，也不清楚什么是 MVC，或者对 Symfony 好处的传言感到好奇，那么这一章就是写给你的。在这里我们不会 *告诉* 你 Symfony 可以让你的开发更快速、更好，而是会带你你亲身见证这一切。
 
-In this chapter, you'll write a simple application in flat PHP, and then
-refactor it to be more organized. You'll travel through time, seeing the
-decisions behind why web development has evolved over the past several years
-to where it is now.
+在本章中，我们将带你用纯 PHP 写一个简单的应用程序，然后将其重构，使之更有条理。你将会穿越时空，了解为什么网站开发在过去几年中会发生如此翻天覆地的变化。
 
-By the end, you'll see how Symfony can rescue you from mundane tasks and
-let you take back control of your code.
+最后带你体会为什么 Symfony 可以让你摆脱掉一切繁琐，从而真正掌控你的代码。
 
-A Simple Blog in Flat PHP
--------------------------
+先用纯 PHP 写一个简单的博客程序
+-------------------------------------------------------------
 
-In this chapter, you'll build the token blog application using only flat PHP.
-To begin, create a single page that displays blog entries that have been
-persisted to the database. Writing in flat PHP is quick and dirty:
+首先，让我们不使用框架写一个博客程序。创建一个来显示数据库里保存的文章的页面。纯 PHP 的话非常简单，但看起来并不舒服：
 
 .. code-block:: html+php
 
@@ -38,10 +29,10 @@ persisted to the database. Writing in flat PHP is quick and dirty:
     <!DOCTYPE html>
     <html>
         <head>
-            <title>List of Posts</title>
+            <title>文章列表</title>
         </head>
         <body>
-            <h1>List of Posts</h1>
+            <h1>文章列表</h1>
             <ul>
                 <?php while ($row = mysql_fetch_assoc($result)): ?>
                 <li>
@@ -58,30 +49,28 @@ persisted to the database. Writing in flat PHP is quick and dirty:
     mysql_close($link);
     ?>
 
-That's quick to write, fast to execute, and, as your app grows, impossible
-to maintain. There are several problems that need to be addressed:
+这样写起来并不费事，运行起来也不慢，但有没有想过随着你程序规模的增大，你该如何维护它。这里列出了几个你可能遇到的问题：
 
-* **No error-checking**: What if the connection to the database fails?
+* **没有出错检查**：如果数据库连接失败怎么办？
 
-* **Poor organization**: If the application grows, this single file will become
-  increasingly unmaintainable. Where should you put code to handle a form
-  submission? How can you validate data? Where should code go for sending
-  emails?
+* **代码结构性差**：随着代码的增多，文件将越来越多
+  最后导致你没法继续维护。如果你要处理表单，对应的代码放在
+  哪儿？如何验证用户提交上来的数据？发邮件的代码写在
+  哪儿呢？
 
-* **Difficult to reuse code**: Since everything is in one file, there's no
-  way to reuse any part of the application for other "pages" of the blog.
+* **代码重复利用率低**：因为所有的代码都写在一个文件里，
+  也就没法在这个博客的别的“页面”里重复使用任何一段代码了。
 
 .. note::
 
-    Another problem not mentioned here is the fact that the database is
-    tied to MySQL. Though not covered here, Symfony fully integrates `Doctrine`_,
-    a library dedicated to database abstraction and mapping.
+    另外一个没有指出的问题是，上面的代码只能用来连接
+     MySQL 数据库。虽然有些超出本章的范围，但还是很想让你知道，Symfony 完整集成了 `Doctrine`_，
+    一个提供抽象数据库操作和表字段映射的库。
 
-Isolating the Presentation
+抽离表现层
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The code can immediately gain from separating the application "logic" from
-the code that prepares the HTML "presentation":
+现在可以立即将包含了 HTML 代码的“表现层”代码单独保存为一个文件，让表现层与主“逻辑”文件分离：
 
 .. code-block:: html+php
 
@@ -99,21 +88,20 @@ the code that prepares the HTML "presentation":
 
     mysql_close($link);
 
-    // include the HTML presentation code
+    // 导入 HTML 表现层文件
     require 'templates/list.php';
 
-The HTML code is now stored in a separate file (``templates/list.php``), which
-is primarily an HTML file that uses a template-like PHP syntax:
+现在 HTML 代码都保存在一个独立的文件（``templates/list.php``）中，这个文件在 HTML 代码中嵌入了模板风格的 PHP 代码：
 
 .. code-block:: html+php
 
     <!DOCTYPE html>
     <html>
         <head>
-            <title>List of Posts</title>
+            <title>文章列表</title>
         </head>
         <body>
-            <h1>List of Posts</h1>
+            <h1>文章列表</h1>
             <ul>
                 <?php foreach ($posts as $post): ?>
                 <li>
@@ -126,23 +114,14 @@ is primarily an HTML file that uses a template-like PHP syntax:
         </body>
     </html>
 
-By convention, the file that contains all the application logic - ``index.php`` -
-is known as a "controller". The term :term:`controller` is a word you'll hear
-a lot, regardless of the language or framework you use. It refers simply
-to the area of *your* code that processes user input and prepares the response.
+根据惯例，上面的包含所有程序逻辑的文件 ``index.php`` 被称为“Controller（控制器）”。所谓 :term:`controller` 是无论你使用的是语言还是框架都会经常听到的一个术语。简单来讲，它是一块 *你写的* 处理用户输入并准备响应的代码。
 
-In this case, the controller prepares data from the database and then includes
-a template to present that data. With the controller isolated, you could
-easily change *just* the template file if you needed to render the blog
-entries in some other format (e.g. ``list.json.php`` for JSON format).
+在上面的例子里，控制器从数据库里读出数据，然后导入一个模板文件来展现这些数据。通过分离控制器的代码，你将可以轻松地修改模板文件，比如以另外的格式来扩展博客文章的渲染方式（如创建一个对应 JSON 格式的 ``list.json.php`` 模板）。
 
-Isolating the Application (Domain) Logic
+分离应用程序逻辑（域）
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-So far the application contains only one page. But what if a second page
-needed to use the same database connection, or even the same array of blog
-posts? Refactor the code so that the core behavior and data-access functions
-of the application are isolated in a new file called ``model.php``:
+到目前为止，我们的程序只有一个页面。但是，如果第二个页面需要使用相同的连接数据库的代码或者要用相同的博客文章的数组呢？让我们再次重构代码，将核心的行为和数据访问功能从原来的程序代码中分离出来放入一个叫做 ``model.php`` 的新文件中：
 
 .. code-block:: html+php
 
@@ -177,14 +156,14 @@ of the application are isolated in a new file called ``model.php``:
 
 .. tip::
 
-   The filename ``model.php`` is used because the logic and data access of
-   an application is traditionally known as the "model" layer. In a well-organized
-   application, the majority of the code representing your "business logic"
-   should live in the model (as opposed to living in a controller). And unlike
-   in this example, only a portion (or none) of the model is actually concerned
-   with accessing a database.
+   使用 ``model.php`` 来命名刚才的新文件是因为程序逻辑和数据访问
+   一般被叫做“Model（模型）”层。在一个代码组织良好的
+   程序中，大多数“业务逻辑”的代码
+   都在模型层中（而不是控制器中）。不像
+   这个例子里的模型层只关注
+   访问数据库这一小部分。
 
-The controller (``index.php``) is now very simple:
+现在的控制器（ ``index.php`` ）就很简单了：
 
 .. code-block:: html+php
 
@@ -195,19 +174,14 @@ The controller (``index.php``) is now very simple:
 
     require 'templates/list.php';
 
-Now, the sole task of the controller is to get data from the model layer of
-the application (the model) and to call a template to render that data.
-This is a very simple example of the model-view-controller pattern.
+现在控制器的唯一任务就是从模型层中得到数据，然后调用一个模板来渲染这些数据。这就是一个最简单的 MVC 模式。
 
-Isolating the Layout
+抽离布局
 ~~~~~~~~~~~~~~~~~~~~
 
-At this point, the application has been refactored into three distinct pieces
-offering various advantages and the opportunity to reuse almost everything
-on different pages.
+现在已经把程序重构成三个有着明显不同优势的部分，并且能在不同的页面中重复使用几乎所有的东西。
 
-The only part of the code that *can't* be reused is the page layout. Fix
-that by creating a new ``layout.php`` file:
+在代码中唯一 *不能* 被重用的就只有布局了，因此让我们创建一个新的 ``layout.php`` 文件来解决这个问题。
 
 .. code-block:: html+php
 
@@ -222,15 +196,14 @@ that by creating a new ``layout.php`` file:
         </body>
     </html>
 
-The template (``templates/list.php``) can now be simplified to "extend"
-the layout:
+现在模板文件（``templates/list.php``）可以简单地从基础布局中“扩展”出来。
 
 .. code-block:: html+php
 
-    <?php $title = 'List of Posts' ?>
+    <?php $title = '文章列表' ?>
 
     <?php ob_start() ?>
-        <h1>List of Posts</h1>
+        <h1>文章列表</h1>
         <ul>
             <?php foreach ($posts as $post): ?>
             <li>
@@ -244,21 +217,14 @@ the layout:
 
     <?php include 'layout.php' ?>
 
-You now have a setup that will allow you to reuse the layout.
-Unfortunately, to accomplish this, you're forced to use a few ugly
-PHP functions (``ob_start()``, ``ob_get_clean()``) in the template. Symfony
-uses a Templating component that allows this to be accomplished cleanly
-and easily. You'll see it in action shortly.
+现在你已经知道了重复使用布局的方法。但不幸的是按照现在的思路，你不得不在模板中使用很多丑陋的PHP函数（诸如 ``ob_start()``、``ob_get_clean()``）。在 Symfony 中，可以使用模板组件来让这一切变得更整洁、更方便。你马上就会看到我们如何使用它。
 
-Adding a Blog "show" Page
--------------------------
+添加一个显示博文的页面
+-------------------------------------------------
 
-The blog "list" page has now been refactored so that the code is better-organized
-and reusable. To prove it, add a blog "show" page, which displays an individual
-blog post identified by an ``id`` query parameter.
+我们已经重构了博客的“列表”页，使它的代码具有了更好的组织性和可重复使用性。为了检验这一点，让我们添加一个显示博文的页面，来显示被通过 ``id`` 参数标记了的单篇博文。
 
-To begin, create a new function in the ``model.php`` file that retrieves
-an individual blog result based on a given id::
+首先在 ``model.php`` 文件中新增一个函数，用来通过给定的 id 检索单篇博文::
 
     // model.php
     function get_post_by_id($id)
@@ -275,8 +241,7 @@ an individual blog result based on a given id::
         return $row;
     }
 
-Next, create a new file called ``show.php`` - the controller for this new
-page:
+接下来创建一个新的叫做 ``show.php``文件，作为新页面的控制器:
 
 .. code-block:: html+php
 
@@ -287,8 +252,7 @@ page:
 
     require 'templates/show.php';
 
-Finally, create the new template file - ``templates/show.php`` - to render
-the individual blog post:
+最后创建新的模板文件 ``templates/show.php`` ，来渲染单篇博文:
 
 .. code-block:: html+php
 
@@ -305,68 +269,47 @@ the individual blog post:
 
     <?php include 'layout.php' ?>
 
-Creating the second page is now very easy and no code is duplicated. Still,
-this page introduces even more lingering problems that a framework can solve
-for you. For example, a missing or invalid ``id`` query parameter will cause
-the page to crash. It would be better if this caused a 404 page to be rendered,
-but this can't really be done easily yet. Worse, had you forgotten to clean
-the ``id`` parameter via the ``intval()`` function, your
-entire database would be at risk for an SQL injection attack.
+现在创建第二页已经非常容易了，也没有写重复的代码。然而这一页还有一堆的问题。选择一个框架吧，把这些问题交给它来解决。例如，缺失或无效的 ``id`` 参数会导致页面崩溃。如果能够触发 404 页面将会更好，但做到这一点并不容易。更糟的是，如果你忘记了用 ``intval()`` 函数对 ``id`` 参数进行清理的话，你将会让整个数据库陷入 SQL 注入攻击的危险之中。
 
-Another major problem is that each individual controller file must include
-the ``model.php`` file. What if each controller file suddenly needed to include
-an additional file or perform some other global task (e.g. enforce security)?
-As it stands now, that code would need to be added to every controller file.
-If you forget to include something in one file, hopefully it doesn't relate
-to security...
+另一个问题就是每一个单独的控制器都必须包含 ``model.php`` 文件。如果每个控制器都突然需要包含一个别的文件或者执行其它全局任务（如安全管理）呢？按照目前的情况，这些代码必须添加到每个控制器文件中。如果你忘了包含某个文件，希望这不会给我们带来不安全的因素…
 
-A "Front Controller" to the Rescue
-----------------------------------
+用一个“前端控制器”来解救
+--------------------------------------------------------------------
 
-The solution is to use a :term:`front controller`: a single PHP file through
-which *all* requests are processed. With a front controller, the URIs for the
-application change slightly, but start to become more flexible:
+现在，使用 :term:`front controller`: 来解救我们的程序吧，它是一个单独的 PHP 文件，我们可以通过它来处理 *所有* 的请求。有了前端控制器，程序的 URI 略有变化，但开始变得更灵活了：
 
 .. code-block:: text
 
-    Without a front controller
-    /index.php          => Blog post list page (index.php executed)
-    /show.php           => Blog post show page (show.php executed)
+    没有前端控制器
+    /index.php          => 博客的列表页（index.php 被运行）
+    /show.php           => 博客的博文展示页（show.php 被运行）
 
-    With index.php as the front controller
-    /index.php          => Blog post list page (index.php executed)
-    /index.php/show     => Blog post show page (index.php executed)
+    使用 index.php 作为前端控制器
+    /index.php          => 博客的列表页（index.php 被运行）
+    /index.php/show          => 博客的博文展示页（index.php 被运行）
 
 .. tip::
-    The ``index.php`` portion of the URI can be removed if using Apache
-    rewrite rules (or equivalent). In that case, the resulting URI of the
-    blog show page would be simply ``/show``.
+    如果使用了 Apache 网页服务器的 rewrite 规则
+    （或别的网页服务器的相同功能），URI 中的 index.php 部分就可以省略掉了。这样的话，博客的
+    博文展示页的 URI 结果就可以简单地用 ``/show`` 来表示。
 
-When using a front controller, a single PHP file (``index.php`` in this case)
-renders *every* request. For the blog post show page, ``/index.php/show`` will
-actually execute the ``index.php`` file, which is now responsible for routing
-requests internally based on the full URI. As you'll see, a front controller
-is a very powerful tool.
+当使用前端控制器时，单个 PHP 文件（在这里是 ``index.php`` ）将渲染 *所有的* 请求，对于博文展示页来说， ``/index.php/show`` 最终实际执行的是 ``index.php`` ，它现在负责用完整的 URI 来进行内部路由请求。。如你所见，前端控制器是个非常强大的工具。
 
-Creating the Front Controller
+制作前端控制器
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You're about to take a **big** step with the application. With one file handling
-all requests, you can centralize things such as security handling, configuration
-loading, and routing. In this application, ``index.php`` must now be smart
-enough to render the blog post list page *or* the blog post show page based
-on the requested URI:
+我们就要对程序进行 **重大** 改动了。一旦单个文件接管了所有的请求，你就可以集中精力处理诸如安全、加载配置、路由等等这类事情了。在这个例子里， ``index.php`` 要足够智能，以便根据请求的 URL 区分并渲染博客列表页和博文展示页：
 
 .. code-block:: html+php
 
     <?php
     // index.php
 
-    // load and initialize any global libraries
+    // 加载并初始化任何全局库
     require_once 'model.php';
     require_once 'controllers.php';
 
-    // route the request internally
+    // 在内部路由用户的请求
     $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     if ('/index.php' == $uri) {
         list_action();
@@ -374,11 +317,10 @@ on the requested URI:
         show_action($_GET['id']);
     } else {
         header('Status: 404 Not Found');
-        echo '<html><body><h1>Page Not Found</h1></body></html>';
+        echo '<html><body><h1>页面未找到！</h1></body></html>';
     }
 
-For organization, both controllers (formerly ``index.php`` and ``show.php``)
-are now PHP functions and each has been moved into a separate file, ``controllers.php``:
+为了更好地组织代码，将两个控制器（之前分别在 ``index.php`` 和 ``show.php``里）写成两个 PHP 函数，并放到新的 ``controllers.php`` 文件里：
 
 .. code-block:: php
 
@@ -394,42 +336,25 @@ are now PHP functions and each has been moved into a separate file, ``controller
         require 'templates/show.php';
     }
 
-As a front controller, ``index.php`` has taken on an entirely new role, one
-that includes loading the core libraries and routing the application so that
-one of the two controllers (the ``list_action()`` and ``show_action()``
-functions) is called. In reality, the front controller is beginning to look and
-act a lot like Symfony's mechanism for handling and routing requests.
+作为前端控制器， ``index.php`` 扮演了一个新的角色：加载核心库并且路由所有的请求，以便使两个控制器之一（ ``list_action()`` 或 ``show_action()`` 函数）被调用。实际上，前端控制器看来去也变得很像 Symfony 中处理请求和路由请求的机制了。
 
 .. tip::
 
-   Another advantage of a front controller is flexible URLs. Notice that
-   the URL to the blog post show page could be changed from ``/show`` to ``/read``
-   by changing code in only one location. Before, an entire file needed to
-   be renamed. In Symfony, URLs are even more flexible.
+   前端控制器另一个优点就是可以提供更灵活的 URL 。注意，
+   博客显示页的URL只需在一个位置修改一下，
+   就可以从 ``/show`` 变成 ``/read`` 。而在此之前，你需要将整个文件
+   重命名。在 Symfony 中，URL 将更加灵活。
 
-By now, the application has evolved from a single PHP file into a structure
-that is organized and allows for code reuse. You should be happier, but far
-from satisfied. For example, the "routing" system is fickle, and wouldn't
-recognize that the list page (``/index.php``) should be accessible also via ``/``
-(if Apache rewrite rules were added). Also, instead of developing the blog,
-a lot of time is being spent working on the "architecture" of the code (e.g.
-routing, calling controllers, templates, etc.). More time will need to be
-spent to handle form submissions, input validation, logging and security.
-Why should you have to reinvent solutions to all these routine problems?
+现在，我们的程序已经从单个的文件发展为拥有良好架构并允许代码重新使用的程序了。你应该觉得高兴，但别感到满意。例如，“路由”系统是多变的，列表页（ ``/index.php`` ）也要可以通过 ``/``来访问（如果添加了 Apache 重写规则的话）。而且，大量的时间花费在“架构”（如路由、控制器和模板等）上，而非花在真正的博客的开发上。你还需要在处理提交上来的表单、验证用户的输入、记录运行日志和安全上花费更多的时间。为什么你要重新发明这些轮子呢？
 
 .. _add-a-touch-of-symfony2:
 
-Add a Touch of Symfony
+接触一下 Symfony
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Symfony to the rescue. Before actually using Symfony, you need to download
-it. This can be done by using Composer, which takes care of downloading the
-correct version and all its dependencies and provides an autoloader. An
-autoloader is a tool that makes it possible to start using PHP classes
-without explicitly including the file containing the class.
+Symfony 来支援我们啦！在用 Symfony 之前，你要先下载它。你可以用 Composer ，它会给你下载正确的版本并安装相关依赖，而且还提供了一个自动加载器。自动加载器是一个可以让你在没有明确声明包含所用的 PHP 类文件时，就可以使用这个类的一个工具。
 
-In your root directory, create a ``composer.json`` file with the following
-content:
+在网站的根目录创建 ``composer.json`` 文件并写入以下内容：
 
 .. code-block:: json
 
@@ -442,23 +367,16 @@ content:
         }
     }
 
-Next, `download Composer`_ and then run the following command, which will download Symfony
-into a vendor/ directory:
+下一步， `download Composer`_ 并运行以下命令来把 Symfony 下载到 vendor/ 目录下：
 
 .. code-block:: bash
 
     $ composer install
 
-Beside downloading your dependencies, Composer generates a ``vendor/autoload.php`` file,
-which takes care of autoloading for all the files in the Symfony Framework as well as
-the files mentioned in the autoload section of your ``composer.json``.
+Composer 在下载依赖的时候会同时生成 ``vendor/autoload.php`` 文件，这个文件会自动装载 Symfony 的所有的文件到 ``composer.json`` 描述的自动装载的文件中。
 
-Core to Symfony's philosophy is the idea that an application's main job is
-to interpret each request and return a response. To this end, Symfony provides
-both a :class:`Symfony\\Component\\HttpFoundation\\Request` and a
-:class:`Symfony\\Component\\HttpFoundation\\Response` class. These classes are
-object-oriented representations of the raw HTTP request being processed and
-the HTTP response being returned. Use them to improve the blog:
+Symfony 哲学的核心是：程序的主要任务就是解释每个请求并返回对应的响应。因此，Symfony 提供了  :class:`Symfony\\Component\\HttpFoundation\\Request` 和 :class:`Symfony\\Component\\HttpFoundation\\Response`  ，
+class. 这两个类是原始的 HTTP 中处理请求和返回响应的面向对象的表述。使用它们来改善我们的博客：
 
 .. code-block:: html+php
 
@@ -477,16 +395,14 @@ the HTTP response being returned. Use them to improve the blog:
     } elseif ('/show' == $uri && $request->query->has('id')) {
         $response = show_action($request->query->get('id'));
     } else {
-        $html = '<html><body><h1>Page Not Found</h1></body></html>';
+        $html = '<html><body><h1>页面未找到！</h1></body></html>';
         $response = new Response($html, 404);
     }
 
-    // echo the headers and send the response
+    // 输出响应头并发回响应
     $response->send();
 
-The controllers are now responsible for returning a ``Response`` object.
-To make this easier, you can add a new ``render_template()`` function, which,
-incidentally, acts quite a bit like the Symfony templating engine:
+现在控制器可以通过返回一个  ``Response`` 对象来返回响应。为了更加方便，你可以加入一个新的 ``render_template()`` 函数，该函数的行为很像 Symfony 的模板引擎：
 
 .. code-block:: php
 
@@ -509,7 +425,7 @@ incidentally, acts quite a bit like the Symfony templating engine:
         return new Response($html);
     }
 
-    // helper function to render templates
+    // 模板渲染帮手函数
     function render_template($path, array $args)
     {
         extract($args);
@@ -520,32 +436,18 @@ incidentally, acts quite a bit like the Symfony templating engine:
         return $html;
     }
 
-By bringing in a small part of Symfony, the application is more flexible and
-reliable. The ``Request`` provides a dependable way to access information
-about the HTTP request. Specifically, the ``getPathInfo()`` method returns
-a cleaned URI (always returning ``/show`` and never ``/index.php/show``).
-So, even if the user goes to ``/index.php/show``, the application is intelligent
-enough to route the request through ``show_action()``.
+通过运用 Symfony 的一小部分，我们的程序变得更加灵活可靠。``Request`` 类提供了一个访问 HTTP 请求信息的可靠方式。具体来说， ``getPathInfo()`` 方法返回一个被清理过的的 URI（比如它会返回 ``/show`` ，而不会是 ``/index.php/show``）。因此即使用户在地址栏里写的是 ``/index.php/show``，应用程序也会智能地将请求路由到 ``show_action()``。
 
-The ``Response`` object gives flexibility when constructing the HTTP response,
-allowing HTTP headers and content to be added via an object-oriented interface.
-And while the responses in this application are simple, this flexibility
-will pay dividends as your application grows.
+在构造 HTTP 响应时， ``Response`` 对象十分灵活，它允许通过一个面向对象的接口写入响应头和内容。虽然在我们的这个博客程序中响应是很简单的，但你将体会到当程序增长时这种灵活性将带来的好处。
 
 .. _the-sample-application-in-symfony2:
 
-The Sample Application in Symfony
+Symfony 程序示例
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The blog has come a *long* way, but it still contains a lot of code for such
-a simple application. Along the way, you've made a simple routing
-system and a method using ``ob_start()`` and ``ob_get_clean()`` to render
-templates. If, for some reason, you needed to continue building this "framework"
-from scratch, you could at least use Symfony's standalone `Routing`_ and
-`Templating`_ components, which already solve these problems.
+我们的程序走到现在花了 *很长* 的时间，相信你已经体会到即使这么简单的程序也包含了大量的代码。一路走来，我们制作了简单的路由系统，并且还写了一个使用 ``ob_start()`` 和 ``ob_get_clean()`` 渲染模板的方法。如果在你下一次从零开始搭建“框架”的时候，你至少可以使用 Symfony 中的独立 `Routing`_  和 `Templating`_ 组件，因为它们已经帮你解决了很多问题。
 
-Instead of re-solving common problems, you can let Symfony take care of
-them for you. Here's the same sample application, now built in Symfony::
+为了不用重新发明轮子，你可以让 Symfony 接管一些部分，下面是我们的程序基于 Symfony 的写法::
 
     // src/AppBundle/Controller/BlogController.php
     namespace AppBundle\Controller;
@@ -572,7 +474,7 @@ them for you. Here's the same sample application, now built in Symfony::
                 ->find($id);
 
             if (!$post) {
-                // cause the 404 page not found to be displayed
+                // 抛出 404 错误
                 throw $this->createNotFoundException();
             }
 
@@ -580,10 +482,7 @@ them for you. Here's the same sample application, now built in Symfony::
         }
     }
 
-The two controllers are still lightweight. Each uses the
-:doc:`Doctrine ORM library </book/doctrine>` to retrieve objects from the
-database and the Templating component to render a template and return a
-``Response`` object. The list template is now quite a bit simpler:
+这两个控制器仍然很轻量，它们都使用 :doc:`Doctrine ORM 库 </book/doctrine>` 从数据库中检索对象，并使用模板组件渲染模板，最后返回 ``Response`` 对象。模板文件现在超级简单：
 
 .. code-block:: html+php
 
@@ -592,7 +491,7 @@ database and the Templating component to render a template and return a
 
     <?php $view['slots']->set('title', 'List of Posts') ?>
 
-    <h1>List of Posts</h1>
+    <h1>文章列表</h1>
     <ul>
         <?php foreach ($posts as $post): ?>
         <li>
@@ -606,7 +505,7 @@ database and the Templating component to render a template and return a
         <?php endforeach ?>
     </ul>
 
-The layout is nearly identical:
+布局文件几乎没变：
 
 .. code-block:: html+php
 
@@ -626,12 +525,10 @@ The layout is nearly identical:
 
 .. note::
 
-    The show template is left as an exercise, as it should be trivial to
-    create based on the list template.
+    在这里我们将博文展示页面模板留做练习，实现它相对于实现
+    博文列表模板来说几乎微不足道。
 
-When Symfony's engine (called the ``Kernel``) boots up, it needs a map so
-that it knows which controllers to execute based on the request information.
-A routing configuration map provides this information in a readable format:
+在 Symfony 引擎（我们称其为 ``Kernel``）启动时，它需要根据一张地图来判断请求信息需要被路由到哪个控制器。所谓的路由表则是一张我们也能读懂的“地图”：
 
 .. code-block:: yaml
 
@@ -644,10 +541,7 @@ A routing configuration map provides this information in a readable format:
         path:     /blog/show/{id}
         defaults: { _controller: AppBundle:Blog:show }
 
-Now that Symfony is handling all the mundane tasks, the front controller
-is dead simple. And since it does so little, you'll never have to touch
-it once it's created (and if you use a Symfony distribution, you won't
-even need to create it!)::
+现在 Symfony 就开始处理所有的简单任务了。前端控制器极其简单，它被创建之后你就无须再去接触它了。（如果你使用 Symfony 的发行版，你都无须去创建它）::
 
     // web/app.php
     require_once __DIR__.'/../app/bootstrap.php';
@@ -658,65 +552,54 @@ even need to create it!)::
     $kernel = new AppKernel('prod', false);
     $kernel->handle(Request::createFromGlobals())->send();
 
-The front controller's only job is to initialize Symfony's engine (``Kernel``)
-and pass it a ``Request`` object to handle. Symfony's core then uses the
-routing map to determine which controller to call. Just like before, the
-controller method is responsible for returning the final ``Response`` object.
-There's really not much else to it.
+前端控制器的唯一工作就是初始化 Symfony 引擎（``内核``）并把一个需要处理的 ``Request`` 对象传入内核。Symfony 内核再根据路由表来确定调用哪个控制器。和之前一样，控制器方法负责返回最终的 ``Response`` 对象。对它来说就真的没有别的可做的了。
 
-For a visual representation of how Symfony handles each request, see the
-:ref:`request flow diagram <request-flow-figure>`.
+至于 Symfony 如何处理请求，请参阅
+:ref:`请求处理流程图  <request-flow-figure>`。
 
 .. _where-symfony2-delivers:
 
-Where Symfony Delivers
+进入 Symfony 的世界
 ~~~~~~~~~~~~~~~~~~~~~~
 
-In the upcoming chapters, you'll learn more about how each piece of Symfony
-works and the recommended organization of a project. For now, have a look
-at how migrating the blog from flat PHP to Symfony has improved life:
+在接下来的章节中，我们将学到更多关于 Symfony 的各部分的工作原理，以及推荐的项目组织形式。现在，看看我们的博客程序从纯 PHP 迁移到 Symfony 后有什么优势：
 
-* Your application now has **clear and consistently organized code** (though
-  Symfony doesn't force you into this). This promotes **reusability** and
-  allows for new developers to be productive in your project more quickly;
+* 现在我们的应用程序代码 **很整洁，组织很好** （虽然
+   Symfony 并不强制你做到这一点）。这提高了我们代码的 **重用率** 并且
+  可以让新加入项目的开发者很快进入角色；
 
-* 100% of the code you write is for *your* application. You **don't need
-  to develop or maintain low-level utilities** such as :ref:`autoloading <autoloading-introduction-sidebar>`,
-  :doc:`routing </book/routing>`, or rendering :doc:`controllers </book/controller>`;
+* 所写的代码100％是为了 *你的* 程序，你 **不再需要
+  开发和维护低级的程序了**，比如 :ref:`自动载入 <autoloading-introduction-sidebar>`、
+  :doc:`路由 </book/routing>`、 或渲染 :doc:`控制器 </book/controller>`；
 
-* Symfony gives you **access to open source tools** such as Doctrine and the
-  Templating, Security, Form, Validation and Translation components (to name
-  a few);
+* Symfony 可以让你 **使用开源工具** 如 Doctrine 、
+  模板、安全、表单、验证组建（只是
+  几个例子）；
 
-* The application now enjoys **fully-flexible URLs** thanks to the Routing
-  component;
+* 感谢路由组件让我们的程序拥有 **十分灵活的URL**
+  ；
 
-* Symfony's HTTP-centric architecture gives you access to powerful tools
-  such as **HTTP caching** powered by **Symfony's internal HTTP cache** or
-  more powerful tools such as `Varnish`_. This is covered in a later chapter
-  all about :doc:`caching </book/http_cache>`.
+* Symfony 以 HTTP 为中心的架构可以让你使用强大的工具，
+  例如使用 **Symfony 的内建 HTTP 缓存** 或更为强大的
+   `Varnish`_ 来实现 **HTTP 缓存**。这将在稍后的 :doc:`缓存 </book/http_cache>` 一章中进行讲解
+  。
 
-And perhaps best of all, by using Symfony, you now have access to a whole
-set of **high-quality open source tools developed by the Symfony community**!
-A good selection of Symfony community tools can be found on `KnpBundles.com`_.
+最值得高兴的是，通过使用 Symfony，你现在可以获得一整套 Symfony 社区开发的高品质开源工具。想获得 Symfony 社区工具请移步 `KnpBundles.com`_。
 
-Better Templates
-----------------
+更好的模板
+--------------------------------------------
 
-If you choose to use it, Symfony comes standard with a templating engine
-called `Twig`_ that makes templates faster to write and easier to read.
-It means that the sample application could contain even less code! Take,
-for example, the list template written in Twig:
+Symfony 标配的模板引擎叫 `Twig`_，如果你选择使用它，它将让你可以更快地书写更有可读性的模板。这意味着我们的博客程序可以用更少的代码来写。比如，列表模板用 Twig 写的话是下面的样子：
 
 .. code-block:: html+jinja
 
     {# app/Resources/views/Blog/list.html.twig #}
     {% extends "layout.html.twig" %}
 
-    {% block title %}List of Posts{% endblock %}
+    {% block title %}文章列表{% endblock %}
 
     {% block body %}
-        <h1>List of Posts</h1>
+        <h1>文章列表</h1>
         <ul>
             {% for post in posts %}
             <li>
@@ -728,7 +611,7 @@ for example, the list template written in Twig:
         </ul>
     {% endblock %}
 
-The corresponding ``layout.html.twig`` template is also easier to write:
+同样的， ``layout.html.twig`` 也不难写：
 
 .. code-block:: html+jinja
 
@@ -736,19 +619,17 @@ The corresponding ``layout.html.twig`` template is also easier to write:
     <!DOCTYPE html>
     <html>
         <head>
-            <title>{% block title %}Default title{% endblock %}</title>
+            <title>{% block title %}默认标题{% endblock %}</title>
         </head>
         <body>
             {% block body %}{% endblock %}
         </body>
     </html>
 
-Twig is well-supported in Symfony. And while PHP templates will always
-be supported in Symfony, the many advantages of Twig will continue to
-be discussed. For more information, see the :doc:`templating chapter </book/templating>`.
+Symfony 很好地支持 Twig。虽然 Symfony 永远支持 PHP 风格模板，但我们将继续讨论 Twig 的更多优势。更多信息请参阅 :doc:`模板章节 </book/templating>`。
 
-Learn more from the Cookbook
-----------------------------
+从技巧书中再学一些
+-------------------------------------------------------
 
 * :doc:`/cookbook/templating/PHP`
 * :doc:`/cookbook/controller/service`
