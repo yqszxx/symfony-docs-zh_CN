@@ -580,8 +580,8 @@ Symfony 程序示例
   ；
 
 * Symfony 以 HTTP 为中心的架构可以让你使用强大的工具，
-  例如使用 **Symfony 的内建 HTTP 缓存** 或更为强大的
-   `Varnish`_ 来实现 **HTTP 缓存**。这将在稍后的 :doc:`缓存 </book/http_cache>` 一章中进行讲解
+  例如使用 **Symfony 的内建 HTTP 缓存** 或更为强大的 
+  `Varnish`_ 来实现 **HTTP 缓存**。这将在稍后的 :doc:`缓存 </book/http_cache>` 一章中进行讲解
   。
 
 最值得高兴的是，通过使用 Symfony，你现在可以获得一整套 Symfony 社区开发的高品质开源工具。想获得 Symfony 社区工具请移步 `KnpBundles.com`_。
