@@ -494,7 +494,7 @@ Symfony 打包了很多有用的类，它们被称为服务。这些服务被用
 
     throw new \Exception('出错了！');
 
-任何情况下，最终用户看到的都是错误页面，开发者看到的都是完整的调试信息 （例如当你使用 ``app_dev.php``时——参阅 :ref:`page-creation-environments`）。
+任何情况下，最终用户看到的都是错误页面，开发者看到的都是完整的调试信息 （例如当你使用 ``app_dev.php`` 时——参阅 :ref:`page-creation-environments`）。
 
 你一定想自定义终端用户看到的错误页面。为达到目的，请参阅技巧书中的 ":doc:`/cookbook/controller/error_pages`" 这一技巧。
 
