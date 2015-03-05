@@ -1,16 +1,19 @@
-Symfony Documentation
-=====================
+Symfony 中文文档
+===================
 
-This documentation is rendered online at http://symfony.com/doc/current/
+正在翻译中，目前由yqszxx（Harry Han）进行维护。
 
-Contributing
-------------
+项目构造状态
+-----------------------
+<a herf="https://travis-ci.org/yqszxx/symfony-docs-zh_CN">
+<img src="https://travis-ci.org/yqszxx/symfony-docs-zh_CN.svg" data-bindattr-787="787" title="项目构造状态">
+</a>
 
->**Note**
->Unless you're documenting a feature that was introduced *after* Symfony 2.3 
->(e.g. in Symfony 2.4), all pull requests must be based off of the **2.3** branch,
->**not** the master or older branches.
+出一份力
+---------------
 
-We love contributors! For more information on how you can contribute to the
-Symfony documentation, please read
-[Contributing to the Documentation](http://symfony.com/doc/current/contributing/documentation/overview.html)
+我们很欢迎帮助我们的人，如果你有能力、有精力参与翻译，请通过 [yqszxx主页](http://yqszxx.org) 
+上的任意一种联系方式和我们联系。
+你今天的小小努力会带来明天世界上数千万人的便捷！
+
+先提前感谢啦！
