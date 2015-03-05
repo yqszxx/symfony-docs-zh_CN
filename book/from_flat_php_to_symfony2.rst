@@ -241,7 +241,7 @@
         return $row;
     }
 
-接下来创建一个新的叫做 ``show.php``文件，作为新页面的控制器:
+接下来创建一个新的叫做 ``show.php`` 文件，作为新页面的控制器:
 
 .. code-block:: html+php
 
