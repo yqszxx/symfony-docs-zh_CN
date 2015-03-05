@@ -8,6 +8,9 @@ Symfony 中文文档
 <a herf="https://travis-ci.org/yqszxx/symfony-docs-zh_CN">
 <img src="https://travis-ci.org/yqszxx/symfony-docs-zh_CN.svg" data-bindattr-787="787" title="项目构造状态">
 </a>
+<a herf="https://readthedocs.org/projects/symfony-docs-zh-cn/?badge=latest">
+<img src="https://readthedocs.org/projects/symfony-docs-zh-cn/badge/?version=latest">
+</a>
 
 出一份力
 ---------------
