@@ -3,14 +3,11 @@ Symfony 中文文档
 
 正在翻译中，目前由yqszxx（Harry Han）进行维护。
 
-项目构造状态
------------------------
-<a herf="https://travis-ci.org/yqszxx/symfony-docs-zh_CN">
-<img src="https://travis-ci.org/yqszxx/symfony-docs-zh_CN.svg" data-bindattr-787="787" title="项目构造状态">
-</a>
-<a herf="https://readthedocs.org/projects/symfony-docs-zh-cn/?badge=latest">
-<img src="https://readthedocs.org/projects/symfony-docs-zh-cn/badge/?version=latest">
-</a>
+项目构造、文档渲染状态
+-------------------------------
+[<img src="https://travis-ci.org/yqszxx/symfony-docs-zh_CN.svg" title="项目构造状态">](https://travis-ci.org/yqszxx/symfony-docs-zh_CN).
+
+[<img src="https://readthedocs.org/projects/symfony-docs-zh-cn/badge/?version=latest" title="文档渲染状态">](https://readthedocs.org/projects/symfony-docs-zh-cn/?badge=latest).
 
 出一份力
 ---------------
