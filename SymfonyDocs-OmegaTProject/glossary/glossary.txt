@@ -1,0 +1,37 @@
+match	命中	路由术语
+controller argument	控制器参数
+variable	变量
+route	路由
+See	参阅
+parameter	参数
+query	查询
+grab	抓取
+statement	声明
+actually	实际上的
+helper method	帮手方法
+functionality	功能
+curious	好奇
+generate	生成
+By default	默认
+method	方法
+avoid	避免
+unnecessarily	不必要的
+structure	结构
+bundle	包
+For more information	更多信息
+throw	抛出
+exception	异常
+base controller class	控制器基类
+retrieve	检索
+recipe	技巧
+cookbook	技巧书
+achieve	实现
+base layout template	主模板框架
+By design	专门的，故意的
+property	属性
+type-hint	类型约束	php的一个功能，参阅php手册“类型约束”
+inject	注入
+representation	表达式
+embed	嵌入
+ultimately	最后；根本；基本上
+integrates	集成

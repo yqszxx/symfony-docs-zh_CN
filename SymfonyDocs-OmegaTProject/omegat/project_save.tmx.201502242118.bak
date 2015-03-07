@@ -1,0 +1,3311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx11.dtd">
+<tmx version="1.1">
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="3.1.8" segtype="sentence" srclang="EN-US"/>
+  <body>
+<!-- Default translations -->
+    <tu>
+      <tuv lang="EN-US">
+        <seg>"controllers" talked about in this chapter.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T121709Z" creationid="Harry" creationdate="20150220T121709Z">
+        <seg>不是同一个东西。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg># app/config/routing.yml</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134445Z" creationid="Harry" creationdate="20150220T134445Z">
+        <seg># app/config/routing.yml</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg># uses a special syntax to point to the controller - see note below</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134549Z" creationid="Harry" creationdate="20150220T134549Z">
+        <seg># 使用这种特定的表达式来指向控制器 - 参阅下面的注解</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>#.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122956Z" creationid="Harry" creationdate="20150220T122956Z">
+        <seg>#.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$ php app/console container:debug</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120944Z" creationid="Harry" creationdate="20150223T120944Z">
+        <seg>$ php app/console container:debug</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$collection = new RouteCollection();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134718Z" creationid="Harry" creationdate="20150220T134718Z">
+        <seg>$collection = new RouteCollection();</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$collection-&gt;add('hello', new Route('/hello/{firstName}/{lastName}', array(</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T102706Z" creationid="Harry" creationdate="20150221T102706Z">
+        <seg>$collection-&gt;add('hello', new Route('/hello/{firstName}/{lastName}', array(</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$collection-&gt;add('hello', new Route('/hello/{name}', array(</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134721Z" creationid="Harry" creationdate="20150220T134721Z">
+        <seg>$collection-&gt;add('hello', new Route('/hello/{name}', array(</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$filters = $session-&gt;get('filters', array());</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T124045Z" creationid="Harry" creationdate="20150223T124045Z">
+        <seg>$filters = $session-&gt;get('filters', array());</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$foobar = $session-&gt;get('foobar');</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T124019Z" creationid="Harry" creationdate="20150223T124019Z">
+        <seg>$foobar = $session-&gt;get('foobar');</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$form = $this-&gt;createForm(...);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T125241Z" creationid="Harry" creationdate="20150223T125241Z">
+        <seg>$form = $this-&gt;createForm(...);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$form-&gt;handleRequest($request);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T125243Z" creationid="Harry" creationdate="20150223T125243Z">
+        <seg>$form-&gt;handleRequest($request);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$mailer = $this-&gt;get('mailer');</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120820Z" creationid="Harry" creationdate="20150223T120820Z">
+        <seg>$mailer = $this-&gt;get('mailer');</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$page = $request-&gt;query-&gt;get('page', 1);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T125136Z" creationid="Harry" creationdate="20150222T125136Z">
+        <seg>$page = $request-&gt;query-&gt;get('page', 1);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$product = ...;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T121540Z" creationid="Harry" creationdate="20150223T121540Z">
+        <seg>$product = ...;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$request-&gt;getPreferredLanguage(array('en', 'fr'));</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T111417Z" creationid="Harry" creationdate="20150224T111417Z">
+        <seg>$request-&gt;getPreferredLanguage(array('en', 'fr'));</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$request-&gt;getSession()-&gt;getFlashBag()-&gt;add(</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T125302Z" creationid="Harry" creationdate="20150223T125302Z">
+        <seg>$request-&gt;getSession()-&gt;getFlashBag()-&gt;add(</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$request-&gt;isXmlHttpRequest(); // is it an Ajax request?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T111414Z" creationid="Harry" creationdate="20150224T111414Z">
+        <seg>$request-&gt;isXmlHttpRequest(); // 是一个Ajax请求吗？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$request-&gt;query-&gt;get('page'); // get a $_GET parameter</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T111442Z" creationid="Harry" creationdate="20150224T111442Z">
+        <seg>$request-&gt;query-&gt;get('page'); // 获取一个 $_GET 的参数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$request-&gt;request-&gt;get('page'); // get a $_POST parameter</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T111502Z" creationid="Harry" creationdate="20150224T111502Z">
+        <seg>$request-&gt;request-&gt;get('page'); // 获取一个 $_POST 的参数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$response = $this-&gt;forward('AppBundle:Something:fancy', array(</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T112443Z" creationid="Harry" creationdate="20150224T112443Z">
+        <seg>$response = $this-&gt;forward('AppBundle:Something:fancy', array(</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$response = new Response('Hello '.$name, 200);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T142623Z" creationid="Harry" creationdate="20150223T142623Z">
+        <seg>$response = new Response('Hello '.$name, 200);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$response = new Response(json_encode(array('name' =&gt; $name)));</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T142822Z" creationid="Harry" creationdate="20150223T142822Z">
+        <seg>$response = new Response(json_encode(array('name' =&gt; $name)));</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$response-&gt;headers-&gt;set('Content-Type', 'application/json');</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T142825Z" creationid="Harry" creationdate="20150223T142825Z">
+        <seg>$response-&gt;headers-&gt;set('Content-Type', 'application/json');</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$router = $this-&gt;get('router');</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120817Z" creationid="Harry" creationdate="20150223T120817Z">
+        <seg>$router = $this-&gt;get('router');</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$session = $request-&gt;getSession();</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T123834Z" creationid="Harry" creationdate="20150223T123834Z">
+        <seg>$session = $request-&gt;getSession();</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$session-&gt;set('foo', 'bar');</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T123943Z" creationid="Harry" creationdate="20150223T123943Z">
+        <seg>$session-&gt;set('foo', 'bar');</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>$templating = $this-&gt;get('templating');</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120812Z" creationid="Harry" creationdate="20150223T120812Z">
+        <seg>$templating = $this-&gt;get('templating');</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>'Your changes were saved!'</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T110921Z" creationid="Harry" creationdate="20150223T125328Z">
+        <seg>'更改已保存！'</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>'_controller' =&gt; 'AppBundle:Hello:index',</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134749Z" creationid="Harry" creationdate="20150220T134749Z">
+        <seg>'_controller' =&gt; 'AppBundle:Hello:index',</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>'color' =&gt; 'green',</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T112449Z" creationid="Harry" creationdate="20150224T112449Z">
+        <seg>'color' =&gt; 'green',</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>'name'  =&gt; $name,</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T112447Z" creationid="Harry" creationdate="20150224T112447Z">
+        <seg>'name'  =&gt; $name,</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>'notice',</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T110903Z" creationid="Harry" creationdate="20150224T110903Z">
+        <seg>'notice',</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>(e.g. ``app_dev.php``).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122136Z" creationid="Harry" creationdate="20150220T122136Z">
+        <seg>（比如 ``app_dev.php``）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>)));</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134753Z" creationid="Harry" creationdate="20150220T134753Z">
+        <seg>)));</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>));</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T112452Z" creationid="Harry" creationdate="20150224T112452Z">
+        <seg>));</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T125331Z" creationid="Harry" creationdate="20150223T125331Z">
+        <seg>);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* **Each required controller argument must match up with a routing parameter**</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T103752Z" creationid="Harry" creationdate="20150221T103752Z">
+        <seg>* **控制器需要的所有参数都必须有一个路由占位符与之对应**</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* **Not all routing parameters need to be arguments on your controller**</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T104325Z" creationid="Harry" creationdate="20150221T104325Z">
+        <seg>* **并不是所有的路由占位符都需要有一个控制器参数与之对应**</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* **The order of the controller arguments does not matter**</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T103117Z" creationid="Harry" creationdate="20150221T103117Z">
+        <seg>* **控制器参数与顺序无关**</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* *Controller A* prepares a ``Response`` object representing the content</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T114828Z" creationid="Harry" creationdate="20150220T114828Z">
+        <seg>* *控制器 A* 要创建一个 ``Response`` 对象来展现</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* *Controller B* reads the ``slug`` parameter from the request to load a</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T115002Z" creationid="Harry" creationdate="20150220T115002Z">
+        <seg>* *控制器 B* 从用户请求中读取 ``slug`` 参数来从数据库中加载</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* *Controller C* handles the form submission of a contact form.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T115511Z" creationid="Harry" creationdate="20150220T115511Z">
+        <seg>* *控制器 C* 来处理一个联系表格的表单子任务。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* *line 10*: The controller creates and returns a ``Response`` object.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134029Z" creationid="Harry" creationdate="20150220T134029Z">
+        <seg>* *第10行*：控制器创建并返回一个 ``Response`` 对象。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* *line 4*: Symfony takes advantage of PHP 5.3 namespace functionality to</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T110710Z" creationid="Harry" creationdate="20150224T110710Z">
+        <seg>* *第4行*： Symfony 使用 PHP 5.3 的命名空间这一很方便的功能来</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* *line 4*: Symfony takes advantage of PHP's namespace functionality to</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T125418Z" creationid="Harry" creationdate="20150220T124523Z">
+        <seg>* *第4行*： Symfony 使用 PHP 的很好用的命名空间功能来</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* *line 6*: The class name is the concatenation of a name for the controller</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T125433Z" creationid="Harry" creationdate="20150220T124920Z">
+        <seg>* *第6行*：类名是在你给控制器类起的名字</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* *line 8*: Each action in a controller class is suffixed with ``Action``</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T130025Z" creationid="Harry" creationdate="20150220T125406Z">
+        <seg>* *第8行*：控制器类中的每一个动作都要以 ``Action`` 结尾</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* :doc:`/cookbook/controller/error_pages`
+* :doc:`/cookbook/controller/service`</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T114805Z" creationid="Harry" creationdate="20150224T114805Z">
+        <seg>* :doc:`/cookbook/controller/error_pages`
+* :doc:`/cookbook/controller/service`</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* @Route("/hello/{firstName}/{lastName}", name="hello")</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T102649Z" creationid="Harry" creationdate="20150221T102649Z">
+        <seg>* @Route("/hello/{firstName}/{lastName}", name="hello")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* @Route("/hello/{name}", name="hello")</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134433Z" creationid="Harry" creationdate="20150220T134433Z">
+        <seg>* @Route("/hello/{name}", name="hello")</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* For JSON, there is :class:`Symfony\\Component\\HttpFoundation\\JsonResponse`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T155338Z" creationid="Harry" creationdate="20150223T155338Z">
+        <seg>* JSON对应的类是 :class:`Symfony\\Component\\HttpFoundation\\JsonResponse`。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* For files, there is :class:`Symfony\\Component\\HttpFoundation\\BinaryFileResponse`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T155412Z" creationid="Harry" creationdate="20150223T155412Z">
+        <seg>* 文件对应的类是 :class:`Symfony\\Component\\HttpFoundation\\BinaryFileResponse`。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>* For streamed responses, there is :class:`Symfony\\Component\\HttpFoundation\\StreamedResponse`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T155457Z" creationid="Harry" creationdate="20150223T155457Z">
+        <seg>* 流式响应对应的类在 :class:`Symfony\\Component\\HttpFoundation\\StreamedResponse`。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>**names** of the controller.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T103458Z" creationid="Harry" creationdate="20150221T103458Z">
+        <seg>**名字** 来进行映射。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>*/</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134436Z" creationid="Harry" creationdate="20150220T134436Z">
+        <seg>*/</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>..</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122903Z" creationid="Harry" creationdate="20150220T122903Z">
+        <seg>..</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>/**</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134429Z" creationid="Harry" creationdate="20150220T134429Z">
+        <seg>/**</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// ...</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T102018Z" creationid="Harry" creationdate="20150221T102018Z">
+        <seg>// ...</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// ... create and return a Response object</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T113141Z" creationid="Harry" creationdate="20150224T113141Z">
+        <seg>// ... 创建并返回一个 Response 对象</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// ... further modify the response or return it directly</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T112528Z" creationid="Harry" creationdate="20150224T112528Z">
+        <seg>// ... 做一些别的更改或者直接返回它</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// app/config/routing.php</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134711Z" creationid="Harry" creationdate="20150220T134711Z">
+        <seg>// app/config/routing.php</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// create a JSON-response with a 200 status code</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T142818Z" creationid="Harry" creationdate="20150223T142818Z">
+        <seg>// 创建一个有 200 状态码（默认）的 JSON 响应</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// create a simple Response with a 200 status code (the default)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T142743Z" creationid="Harry" creationdate="20150223T142619Z">
+        <seg>// 创建一个有 200 状态码（默认）的简单响应</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// do some sort of processing</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T125259Z" creationid="Harry" creationdate="20150223T125259Z">
+        <seg>// 做一些处理</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// get the attribute set by another controller in another request</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T124016Z" creationid="Harry" creationdate="20150223T124016Z">
+        <seg>// 获取在别的会话中别的控制器设置的属性</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// renders app/Resources/views/Hello/Greetings/index.html.twig</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T115552Z" creationid="Harry" creationdate="20150223T115552Z">
+        <seg>// 渲染 app/Resources/views/Hello/Greetings/index.html.twig</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// renders app/Resources/views/Hello/index.html.twig</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T115358Z" creationid="Harry" creationdate="20150223T115358Z">
+        <seg>// 渲染 app/Resources/views/Hello/index.html.twig</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// retrieve the object from database</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T121535Z" creationid="Harry" creationdate="20150223T121535Z">
+        <seg>// 从数据库中检索目标</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// src/AppBundle/Controller/HelloController.php</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T123358Z" creationid="Harry" creationdate="20150220T123358Z">
+        <seg>// src/AppBundle/Controller/HelloController.php</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// store an attribute for reuse during a later user request</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T123940Z" creationid="Harry" creationdate="20150223T123940Z">
+        <seg>// 存储一个在处理用户之后的请求时会用到的属性</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// use a default value if the attribute doesn't exist</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T124042Z" creationid="Harry" creationdate="20150223T124042Z">
+        <seg>// 在属性不存在时使用一个默认值</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>// uses a special syntax to point to the controller - see note below</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134739Z" creationid="Harry" creationdate="20150220T134739Z">
+        <seg>// 使用这种特定的表达式来指向控制器 - 参阅下面的注解</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>:doc:`/cookbook/routing/extra_information`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T105446Z" creationid="Harry" creationdate="20150221T105446Z">
+        <seg>:doc:`/cookbook/routing/extra_information`.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>:doc:`Routing chapter &lt;/book/routing&gt;`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T143146Z" creationid="Harry" creationdate="20150220T143146Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>:ref:`Access Request Information &lt;component-http-foundation-request&gt;`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T110849Z" creationid="Harry" creationdate="20150224T110849Z">
+        <seg>:ref:`Access Request Information &lt;component-http-foundation-request&gt;`.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;!-- app/config/routing.xml --&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134614Z" creationid="Harry" creationdate="20150220T134614Z">
+        <seg>&lt;!-- app/config/routing.xml --&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;!-- uses a special syntax to point to the controller - see note below --&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134745Z" creationid="Harry" creationdate="20150220T134636Z">
+        <seg>&lt;!-- 使用这种特定的表达式来指向控制器 - 参阅下面的注解 --&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;/div&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T130918Z" creationid="Harry" creationdate="20150223T130918Z">
+        <seg>&lt;/div&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;/route&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134705Z" creationid="Harry" creationdate="20150220T134705Z">
+        <seg>&lt;/route&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;/routes&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134708Z" creationid="Harry" creationdate="20150220T134708Z">
+        <seg>&lt;/routes&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;?php echo "&lt;div class='flash-error'&gt;$message&lt;/div&gt;" ?&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T130930Z" creationid="Harry" creationdate="20150223T130930Z">
+        <seg>&lt;?php echo "&lt;div class='flash-error'&gt;$message&lt;/div&gt;" ?&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;?php endforeach ?&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T130934Z" creationid="Harry" creationdate="20150223T130934Z">
+        <seg>&lt;?php endforeach ?&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;?php foreach ($view['session']-&gt;getFlash('notice') as $message): ?&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T130927Z" creationid="Harry" creationdate="20150223T130927Z">
+        <seg>&lt;?php foreach ($view['session']-&gt;getFlash('notice') as $message): ?&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134617Z" creationid="Harry" creationdate="20150220T134617Z">
+        <seg>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;default key="_controller"&gt;AppBundle:Hello:index&lt;/default&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134702Z" creationid="Harry" creationdate="20150220T134702Z">
+        <seg>&lt;default key="_controller"&gt;AppBundle:Hello:index&lt;/default&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;div class="flash-notice"&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T130911Z" creationid="Harry" creationdate="20150223T130911Z">
+        <seg>&lt;div class="flash-notice"&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;route id="hello" path="/hello/{firstName}/{lastName}"&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T102703Z" creationid="Harry" creationdate="20150221T102703Z">
+        <seg>&lt;route id="hello" path="/hello/{firstName}/{lastName}"&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;route id="hello" path="/hello/{name}"&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134629Z" creationid="Harry" creationdate="20150220T134629Z">
+        <seg>&lt;route id="hello" path="/hello/{name}"&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;routes xmlns="http://symfony.com/schema/routing"</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134620Z" creationid="Harry" creationdate="20150220T134620Z">
+        <seg>&lt;routes xmlns="http://symfony.com/schema/routing"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A Simple Controller
+-------------------</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122329Z" creationid="Harry" creationdate="20150220T122329Z">
+        <seg>一个简单的控制器
+------------------------</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A controller is a PHP callable you create that takes information from the
+HTTP request and constructs and returns an HTTP response (as a Symfony
+``Response`` object).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122538Z" creationid="Harry" creationdate="20150219T154447Z">
+        <seg>控制器是一段可以被调用的 PHP 代码，它从 HTTP 请求中获取信息，并且相应地构造和返回一个 HTTP 响应（作为 Symfony 的 ``Response`` 对象）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A front controller</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T121956Z" creationid="Harry" creationdate="20150220T121728Z">
+        <seg>前端控制器</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A great way to see the core functionality in action is to look in the
+`Controller class`_.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T133357Z" creationid="Harry" creationdate="20150222T133357Z">
+        <seg>查看正在运作的核心功能的方法就是看看`Controller class`_。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A typical application will have a production</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122111Z" creationid="Harry" creationdate="20150220T121940Z">
+        <seg>典型的程序会有一个生产环境</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Accessing other Services
+~~~~~~~~~~~~~~~~~~~~~~~~</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120240Z" creationid="Harry" creationdate="20150223T120240Z">
+        <seg>访问其他服务
+~~~~~~~~~~~~~~~~~~~~~~~~</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Add the ``use`` statement atop the ``Controller`` class and then modify the
+``HelloController`` to extend it::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T131219Z" creationid="Harry" creationdate="20150222T131219Z">
+        <seg>把 ``use`` 的声明放在 ``Controller`` 类的上面，然后修改一下 ``HelloController`` 去继承基类::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>After processing the request, the controller sets a ``notice`` flash message
+in the session and then redirects.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T125844Z" creationid="Harry" creationdate="20150223T125741Z">
+        <seg>处理完请求后，控制器在会话中设置了一个叫做 ``notice`` 的闪电消息并重定向。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>All of that information is stored in Symfony's ``Request``
+object.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T124352Z" creationid="Harry" creationdate="20150222T124352Z">
+        <seg>所有的这些信息都被存储到了 Symfony 的 ``Request（请求）`` 对象中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Along the way, it might read information from the request, load a
+database resource, send an email, or set information on the user's session.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T114128Z" creationid="Harry" creationdate="20150220T113912Z">
+        <seg>在这个过程中，控制器可能会从请求（Request）中读取一些信息，载入几个数据库资源，发送一封电子邮件，或者在用户会话（Session）中写入一些东西。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Besides the values of the routing placeholders, the controller also has access
+to the ``Request`` object.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T111052Z" creationid="Harry" creationdate="20150224T111052Z">
+        <seg>除了来自路由占位符的值，控制器还可以访问 ``Request（请求）`` 对象。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>But in all cases, the controller will eventually return the ``Response`` object
+that will be delivered back to the client.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T114418Z" creationid="Harry" creationdate="20150220T114418Z">
+        <seg>但不论在哪一种情况下，控制器最终都要返回将要发回客户端的 ``Response`` 对象。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>By default, Symfony stores the attributes in a cookie
+by using the native PHP sessions.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T123631Z" creationid="Harry" creationdate="20150223T123631Z">
+        <seg>默认情况下，Symfony 使用 PHP 原生的会话管理工具将这些信息储存在 Cookie 中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>By default, the ``redirect()`` method performs a 302 (temporary) redirect.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T134720Z" creationid="Harry" creationdate="20150222T134720Z">
+        <seg>在默认情况下， ``redirect()`` 方法生成的是 302（暂时）重定向。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>By design, flash messages are meant to live for exactly one request (they're
+"gone in a flash").</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T131502Z" creationid="Harry" creationdate="20150223T131502Z">
+        <seg>闪电消息被专门设计为只能在紧接着的请求中使用（它们像闪电一样转瞬即逝）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Controller
+==========</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T072847Z" creationid="Harry" creationdate="20150219T153903Z">
+        <seg>控制器（Controller）
+========================</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Controllers are also called *actions*.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T125553Z" creationid="Harry" creationdate="20150220T123347Z">
+        <seg>控制器也被叫做 *Action（动作）*。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creating Static Pages
+---------------------</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T111834Z" creationid="Harry" creationdate="20150224T111834Z">
+        <seg>创建静态页面
+------------------------------</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creating a "page" means
+simply creating a controller method and an associated route.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T110947Z" creationid="Harry" creationdate="20150220T135606Z">
+        <seg>创建“页面”的意思只是简单地创建一个控制器的方法和对应的路由。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creating a page is as easy as creating a controller (#3) and making a route that
+maps a URL to that controller (#2).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T121423Z" creationid="Harry" creationdate="20150220T121423Z">
+        <seg>创建一个页面简单到只需要创建一个控制器（第三步中用到），再添加一条路由将 URL 映射到控制器上（第二步中用到）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Don't be confused</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T123806Z" creationid="Harry" creationdate="20150220T123806Z">
+        <seg>别被</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Don't worry!</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T110407Z" creationid="Harry" creationdate="20150224T110407Z">
+        <seg>别担心！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Each request is handled by a single front controller file (e.g. ``app.php``</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T121526Z" creationid="Harry" creationdate="20150220T120328Z">
+        <seg>每个请求都被交给一个单一的前端控制器（Front Controller）处理并引导整个程序（如 ``app.php``</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Every request handled by a Symfony project goes through the same simple lifecycle.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T120019Z" creationid="Harry" creationdate="20150220T120019Z">
+        <seg>每一个 Symfony 项目处理的请求都经过这个简单的生命周期。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Every route also has a special ``_route`` parameter, which is equal to</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T104554Z" creationid="Harry" creationdate="20150221T104554Z">
+        <seg>每一个路由也都有一个特殊的 ``_route`` 占位符，它等同于</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Final Thoughts
+--------------</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T113645Z" creationid="Harry" creationdate="20150224T113645Z">
+        <seg>结语
+--------------</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Finally, it creates</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T115645Z" creationid="Harry" creationdate="20150220T115645Z">
+        <seg>最后，它创建</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Flash Messages
+~~~~~~~~~~~~~~</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T124730Z" creationid="Harry" creationdate="20150223T124730Z">
+        <seg>闪电消息
+~~~~~~~~~~~~~~</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For convenience, Symfony comes with an optional base ``Controller`` class.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T125430Z" creationid="Harry" creationdate="20150222T125430Z">
+        <seg>为了更加方便，Symfony 提供了一个 ``Controller`` 基类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example,</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120128Z" creationid="Harry" creationdate="20150223T120128Z">
+        <seg>例如，</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example,
+since you don't want to put HTML code in your controller, you can use
+the ``render()`` method to render and return the content from a template.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T114513Z" creationid="Harry" creationdate="20150224T114513Z">
+        <seg>比如，因为你不想在控制器里写 HTML 代码，你就可以用 ``render()`` 方法来从模板中渲染内容并返回。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, imagine you're processing a form submit::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T125232Z" creationid="Harry" creationdate="20150223T125232Z">
+        <seg>设想你正在处理一个提交上来的表格::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For more details</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T142935Z" creationid="Harry" creationdate="20150220T142911Z">
+        <seg>想要详细了解</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For more information, see the :doc:`/book/service_container` chapter.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T121030Z" creationid="Harry" creationdate="20150223T121030Z">
+        <seg>更多信息，请参阅 :doc:`/book/service_container` 一章。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For more information, see the :doc:`Routing &lt;/book/routing&gt;`
+chapter.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T134532Z" creationid="Harry" creationdate="20150222T134532Z">
+        <seg>获取更多信息，请参阅 :doc:`Routing &lt;/book/routing&gt;` 章节。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Forms
+=====</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T121804Z" creationid="Harry" creationdate="20150224T121804Z">
+        <seg>表单
+=====</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Forwarding to Another Controller
+--------------------------------</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T111958Z" creationid="Harry" creationdate="20150224T111958Z">
+        <seg>重定向到另一个控制器
+-----------------------------------------------</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Here are a few
+common examples:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T114612Z" creationid="Harry" creationdate="20150220T114612Z">
+        <seg>这儿有一些简单的例子：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Here are several common services you might need::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120745Z" creationid="Harry" creationdate="20150223T120745Z">
+        <seg>这里有一些你可能会用到的基本服务::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If the ``slug`` can't be found in the database, it creates and</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T115235Z" creationid="Harry" creationdate="20150220T115235Z">
+        <seg>如果数据库中没有 ``slug`` ，控制器就创建一个</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you change the
+order of the arguments, Symfony will still pass the correct value to each
+variable.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T113604Z" creationid="Harry" creationdate="20150224T113604Z">
+        <seg>如果你更改了参数的顺序，Symfony 还是会将正确的值传递给各个变量。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you extend it, you'll get access to a number of helper methods and all
+of your service objects via the container (see :ref:`controller-accessing-services`).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T125925Z" creationid="Harry" creationdate="20150222T125925Z">
+        <seg>如果你将其继承，你就可以访问很多的帮手方法，也可以通过容器来访问你的服务（参阅 :ref:`controller-accessing-services`）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you use the YML or XML formats, you'll refer to the controller using</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T142716Z" creationid="Harry" creationdate="20150220T142716Z">
+        <seg>如果你用 YML 或者 XML 格式，你就需要使用一种特定的</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you want to redirect the user to another page, use the
+:method:`Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller::redirect`
+method::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T133916Z" creationid="Harry" creationdate="20150222T133916Z">
+        <seg>如果你想将用户重定向到另一个页面，请使用 :method:`Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller::redirect` 方法 ::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you're curious about how a controller would work that did *not* extend</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T133518Z" creationid="Harry" creationdate="20150222T133518Z">
+        <seg>如果你很好奇控制器在 *不* 继承</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you're extending the base controller class, do the following::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T121449Z" creationid="Harry" creationdate="20150223T121449Z">
+        <seg>如果你继承了控制器基类，按照下面的来做::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you're serving HTML, you'll want to render a template.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T115135Z" creationid="Harry" creationdate="20150223T115135Z">
+        <seg>如果你要使用 HTML，你就一定要渲染模板。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If, for example, the ``lastName`` weren't important for your controller,</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T104401Z" creationid="Harry" creationdate="20150221T104401Z">
+        <seg>如果假设 ``lastName`` 在你的控制器中并不是那么重要，</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In Symfony, this is called a controller,
+and it's a PHP function where you can do anything in order to return the
+final ``Response`` object that will be returned to the user.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T114152Z" creationid="Harry" creationdate="20150224T114152Z">
+        <seg>在 Symfony 里，这被称为控制器，并且它是一个可以为了返回最终会被返回给用户的 ``Response`` 对象而做任何事的 PHP 函数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In every case, an error page is shown to the end user and a full debug
+error page is shown to the developer (i.e. when you're using ``app_dev.php`` -
+see :ref:`page-creation-environments`).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T122352Z" creationid="Harry" creationdate="20150223T122352Z">
+        <seg>任何情况下，最终用户看到的都是错误页面，开发者看到的都是完整的调试信息 （例如当你使用 ``app_dev.php``时——参阅 :ref:`page-creation-environments`）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In other chapters, you'll see how the controller can be used to persist and
+fetch objects from a database, process form submissions, handle caching and
+more.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T114703Z" creationid="Harry" creationdate="20150224T114703Z">
+        <seg>在别的章节中，你将学到控制器如何将对象持久化到数据库中或从数据库中获取对象、在子任务中处理、处理缓存还有更多更多。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the next section, you'll create a route that maps a URI to this action.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T130004Z" creationid="Harry" creationdate="20150220T130004Z">
+        <seg>在下一节你将创建一条路由将 URL 映射到这个动作上。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the template of the next page (or even better, in your base layout template),
+the following code will render the ``notice`` message:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T130854Z" creationid="Harry" creationdate="20150223T130854Z">
+        <seg>在下一个页面中的模板里（更聪明的方法是写入主模板框架），下面的代码将渲染 ``notice`` 这个消息。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In this case, the
+target controller function will be ``SomethingController::fancyAction()``
+inside the AppBundle.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T112801Z" creationid="Harry" creationdate="20150224T112801Z">
+        <seg>在这个例子中，目标控制器是 AppBundle 中的 ``SomethingController::fancyAction()`` 控制器。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Instead of redirecting the user's browser, it makes an internal sub-request,
+and calls the controller.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T112210Z" creationid="Harry" creationdate="20150224T112210Z">
+        <seg>这样做并不会重定向用户的浏览器，而会建立一个内部子请求并调用对应的控制器。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It reads</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T115522Z" creationid="Harry" creationdate="20150220T115522Z">
+        <seg>它从</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It's equivalent to::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T114841Z" creationid="Harry" creationdate="20150223T114841Z">
+        <seg>它等价于::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Just like when creating a controller for a route, the order of the arguments of
+``fancyAction`` doesn't matter.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T113303Z" creationid="Harry" creationdate="20150224T113303Z">
+        <seg>就像在给路由创建控制器时那样， ``fancyAction`` 的参数的顺序并不影响运行。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Just try to avoid creating
+unnecessarily deep structures::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T115543Z" creationid="Harry" creationdate="20150223T115512Z">
+        <seg>但还是要避免创建不必要的更深的结构::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Keep
+the following guidelines in mind while you develop.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T103038Z" creationid="Harry" creationdate="20150221T103038Z">
+        <seg>在开发时请记住以下几条准则。.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Learn more from the Cookbook
+----------------------------</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T114800Z" creationid="Harry" creationdate="20150224T114800Z">
+        <seg>从技巧书中再学一些
+-------------------------------------------------------</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Like the ``Response`` object, the request headers are stored in a ``HeaderBag``
+object and are easily accessible.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T111749Z" creationid="Harry" creationdate="20150224T111749Z">
+        <seg>就像 ``响应`` 对象一样，请求头被存储在 ``HeaderBag（请求头包）`` 对象中，访问起来很容易。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Making the argument optional, however, is perfectly ok.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T104144Z" creationid="Harry" creationdate="20150221T104144Z">
+        <seg>但是将 ``foo`` 这个参数设为可选参数是可行的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Managing Errors and 404 Pages
+-----------------------------</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T121059Z" creationid="Harry" creationdate="20150223T121059Z">
+        <seg>管理错误和 404 页面
+------------------------------------------------</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Managing the Session
+--------------------</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T123124Z" creationid="Harry" creationdate="20150223T123124Z">
+        <seg>管理会话
+--------------------</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Mapping a URL to a Controller
+-----------------------------</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134109Z" creationid="Harry" creationdate="20150220T134109Z">
+        <seg>将 URL 映射到控制器上
+--------------------------------</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Mapping route parameters to controller arguments is easy and flexible.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T102926Z" creationid="Harry" creationdate="20150221T102926Z">
+        <seg>将路由占位符映射到控制器参数是简单且灵活的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note that the *controller* is the ``indexAction`` method, which lives</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T123728Z" creationid="Harry" creationdate="20150220T123728Z">
+        <seg>注意这里的 *控制器* 是在 *控制器类*（``HelloController``）的 ``indexAction`` 方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Notice that the ``forward()`` method uses a special string representation
+of the controller (see :ref:`controller-string-syntax`).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T112706Z" creationid="Harry" creationdate="20150224T112706Z">
+        <seg>请注意 ``forward()`` 方法使用一种特殊的控制器定位表达式（参阅 :ref:`controller-string-syntax`）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Now, the controller can have two arguments::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T102825Z" creationid="Harry" creationdate="20150221T102825Z">
+        <seg>现在，控制器可以有两个参数了::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Now, you can go to ``/hello/ryan`` (e.g. ``http://localhost:8000/app_dev.php/hello/ryan``
+if you're using the :doc:`built-in web server &lt;/cookbook/web_server/built_in&gt;`)
+and Symfony will execute the ``HelloController::indexAction()`` controller
+and pass in ``ryan`` for the ``$name`` variable.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T135427Z" creationid="Harry" creationdate="20150220T135427Z">
+        <seg>好了，现在如果你访问 ``/hello/ryan`` （比如在你使用:doc:`built-in web server &lt;/cookbook/web_server/built_in&gt;` 链接就是 ``http://localhost:8000/app_dev.php/hello/ryan``）时， Symfony 就会执行 ``HelloController::indexAction()`` 控制器并将 ``ryan`` 传入作为``$name`` 变量的值。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Of course, you're free to throw any ``Exception`` class in your controller -
+Symfony will automatically return a 500 HTTP response code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T122052Z" creationid="Harry" creationdate="20150223T122052Z">
+        <seg>当然，你可以自由的从你的控制器中抛出任何 ``Exception（异常）`` 类——Symfony 将会自动的生成 HTTP 500（内部服务器错误）响应。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Redirecting
+~~~~~~~~~~~</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T133830Z" creationid="Harry" creationdate="20150222T133830Z">
+        <seg>重定向
+~~~~~~~~~~~</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Rendering Templates
+~~~~~~~~~~~~~~~~~~~</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T114909Z" creationid="Harry" creationdate="20150223T114909Z">
+        <seg>渲染模板
+~~~~~~~~~~~~~~~~~~~</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Requests, Controller, Response Lifecycle
+----------------------------------------</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T072929Z" creationid="Harry" creationdate="20150220T115912Z">
+        <seg>请求（Requests）、控制器（Controller）、响应（Response）生命周期
+-------------------------------------------------------------------------------------------------------------------------------</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Route Parameters as Controller Arguments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T072943Z" creationid="Harry" creationdate="20150220T143331Z">
+        <seg>作为控制器参数的路由占位符
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T105442Z" creationid="Harry" creationdate="20150221T105442Z">
+        <seg>参阅</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See :doc:`/cookbook/templating/render_without_controller`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T111939Z" creationid="Harry" creationdate="20150224T111939Z">
+        <seg>参阅 :doc:`/cookbook/templating/render_without_controller`。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See :ref:`component-http-foundation-json-response`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T155350Z" creationid="Harry" creationdate="20150223T155350Z">
+        <seg>参阅 :ref:`component-http-foundation-json-response`。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See :ref:`component-http-foundation-request`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T111814Z" creationid="Harry" creationdate="20150224T111814Z">
+        <seg>参阅 :ref:`component-http-foundation-request`。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See :ref:`component-http-foundation-response`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T110509Z" creationid="Harry" creationdate="20150224T110509Z">
+        <seg>参阅 :ref:`component-http-foundation-response`。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See :ref:`component-http-foundation-serving-files`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T155420Z" creationid="Harry" creationdate="20150223T155420Z">
+        <seg>参阅 :ref:`component-http-foundation-serving-files`。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See :ref:`streaming-response`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T155504Z" creationid="Harry" creationdate="20150223T155504Z">
+        <seg>参阅 :ref:`streaming-response`。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See :ref:`template-referencing-in-bundle`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120216Z" creationid="Harry" creationdate="20150223T120216Z">
+        <seg>参阅 :ref:`template-referencing-in-bundle`。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See how simple this is by looking at a Symfony controller in action.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T113518Z" creationid="Harry" creationdate="20150220T113518Z">
+        <seg>通过看这个 Symfony 控制器来了解这一切是多么的简单吧！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Simple, right?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T135628Z" creationid="Harry" creationdate="20150220T135628Z">
+        <seg>简单吧？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So the value for ``{name}`` is passed to ``$name``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T102615Z" creationid="Harry" creationdate="20150221T102615Z">
+        <seg>所以 ``{name}`` 的值将被传递给 ``$name``。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Storing and retrieving information from the session can be easily achieved
+from any controller::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T123824Z" creationid="Harry" creationdate="20150223T123824Z">
+        <seg>不管在哪个控制器中，向会话写入信息和从会话中读取信息都可以轻易实现::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Symfony comes packed with a lot of useful objects, called services.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120328Z" creationid="Harry" creationdate="20150223T120328Z">
+        <seg>Symfony 打包了很多有用的类，它们被称为服务。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Symfony matches the index key names (e.g.
+``name``) with the method argument names (e.g. ``$name``).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T113515Z" creationid="Harry" creationdate="20150224T113515Z">
+        <seg>Symfony 会将数组的键名（比如 ``name``）与控制器方法的参数名（比如 ``$name``）对应起来。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Symfony matches the parameter **names** from the route to the variable</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T103439Z" creationid="Harry" creationdate="20150221T103439Z">
+        <seg>Symfony 使用路由占位符的 **名字** 和控制器参数的</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Symfony provides a nice session object that you can use to store information
+about the user (be it a real person using a browser, a bot, or a web service)
+between requests.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T123446Z" creationid="Harry" creationdate="20150223T123446Z">
+        <seg>Symfony 提供一个很好用的会话类，你可以用它在请求间存储用户（可以是一个使用浏览器的真实的人类，或是一个蜘蛛机器人，或是一个网络服务）的信息。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Take the following more-interesting example:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T102642Z" creationid="Harry" creationdate="20150221T102642Z">
+        <seg>看一下这个更有趣的例子吧：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The
+:class:`Symfony\\Component\\HttpFoundation\\Response` class is an abstraction
+around the HTTP response: the text-based message filled with headers and
+content that's sent back to the client::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T144910Z" creationid="Harry" creationdate="20150223T135846Z">
+        <seg>Symfony 中的 :class:`Symfony\\Component\\HttpFoundation\\Response` 类是对 HTTP 响应的抽象：响应头和内容被填入基于文本的消息中发回客户端::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The
+header names are normalized so that using ``Content-Type`` is equivalent to
+``content-type`` or even ``content_type``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T153844Z" creationid="Harry" creationdate="20150223T153844Z">
+        <seg>响应头的名字是标准化了的，所以用 ``Content-Type`` 等价于 ``content-type`` 或者 ``content_type``。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Base Controller Class
+-------------------------</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T125332Z" creationid="Harry" creationdate="20150222T125332Z">
+        <seg>控制器基类
+-------------------------</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The HTTP headers and content of the ``Response`` object are sent back to</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T121016Z" creationid="Harry" creationdate="20150220T121016Z">
+        <seg>``Response`` 对象中的 HTTP 头和内容将被送回</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Request Object
+------------------</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T110537Z" creationid="Harry" creationdate="20150224T110537Z">
+        <seg>请求（Request）对象
+--------------------------------------------</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Response Object
+-------------------</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T131947Z" creationid="Harry" creationdate="20150223T131947Z">
+        <seg>Response（响应）对象
+----------------------------------------------</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Symfony templating engine is explained in great detail in the
+:doc:`Templating &lt;/book/templating&gt;` chapter.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T115714Z" creationid="Harry" creationdate="20150223T115714Z">
+        <seg>在 :doc:`Templating &lt;/book/templating&gt;` 一章详细讲解了 Symfony 模板引擎。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``Request`` as a Controller Argument
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T123217Z" creationid="Harry" creationdate="20150222T123217Z">
+        <seg>将 ``Request`` 作为控制器参数
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``Router`` reads information from the request (e.g. the URI), finds</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T120622Z" creationid="Harry" creationdate="20150220T120456Z">
+        <seg>``Router（路由器）`` 从请求中读取信息（比如 URI)，并</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``createNotFoundException()`` method is just a shortcut to create a
+special :class:`Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException`
+object, which ultimately triggers a 404 HTTP response inside Symfony.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T121912Z" creationid="Harry" creationdate="20150223T121912Z">
+        <seg>上面用到的 ``createNotFoundException()`` 方法只是一个创建特殊的 :class:`Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException` 对象（一个创建 HTTP 404 响应的 Symfony 类）的快捷方式。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``forward()`` method returns the ``Response``
+object that's returned from *that* controller::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T112439Z" creationid="Harry" creationdate="20150224T112439Z">
+        <seg>刚才提到的 ``forward()`` 方法会返回一个来自 *那个（重定向到的）* 控制器的 ``Response`` 对象::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``generateUrl()`` method is just a helper function that generates the URL
+for a given route.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T134050Z" creationid="Harry" creationdate="20150222T134050Z">
+        <seg>上面的 ``generateUrl()`` 方法只是一个生成给定路由的 URL 的帮手方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``headers`` property is a :class:`Symfony\\Component\\HttpFoundation\\HeaderBag`
+object and has some nice methods for getting and setting the headers.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T145233Z" creationid="Harry" creationdate="20150223T144904Z">
+        <seg>上面的 ``headers`` 属性是一个 :class:`Symfony\\Component\\HttpFoundation\\HeaderBag` 类，它有一些很棒的读写响应头的方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``redirect()`` method is simply a shortcut that creates a ``Response``</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T114812Z" creationid="Harry" creationdate="20150223T114812Z">
+        <seg>上面提到的 ``redirect()`` 方法只是一个创建专门重定向用户的 ``Response``</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``render()``
+method renders a template **and** puts that content into a ``Response``
+object for you::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T115340Z" creationid="Harry" creationdate="20150223T115340Z">
+        <seg>一个叫做 ``render()`` 的方法会渲染一个模板 **并且** 为你把内容放入 ``Response`` 类中::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``use`` keyword imports the</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T124702Z" creationid="Harry" creationdate="20150220T124702Z">
+        <seg>``use`` 关键字将导入</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The arguments of the controller could be totally</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T103524Z" creationid="Harry" creationdate="20150221T103524Z">
+        <seg>控制器参数可以被完全</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The array passed to the method becomes the arguments on
+the resulting controller.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T112926Z" creationid="Harry" creationdate="20150224T112926Z">
+        <seg>作为方法的参数的数组将会被作为控制器参数传入目标控制器。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The controller contains whatever arbitrary logic *your
+application* needs to render the content of a page.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T065711Z" creationid="Harry" creationdate="20150220T113302Z">
+        <seg>控制器将包含 *你的程序* 所需的一切渲染页面内容的逻辑。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The controller from the matched route is executed and the code inside the</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T102212Z" creationid="Harry" creationdate="20150220T120840Z">
+        <seg>被命中的路由信息中给出的控制器将被执行，控制器中的代码将</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The controller has a single argument, ``$name``, which corresponds to the
+``{name}`` parameter from the matched route (``ryan`` if you go to ``/hello/ryan``).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T102422Z" creationid="Harry" creationdate="20150221T102422Z">
+        <seg>控制器有一个与被命中的路由信息中的 ``{name}`` 占位符对应的参数 ``$name``（如果你访问 ``/hello/ryan`` 就是 ``ryan``）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T104157Z" creationid="Harry" creationdate="20150221T104157Z">
+        <seg>下面这个</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following would throw a ``RuntimeException`` because there is no ``foo``</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T103909Z" creationid="Harry" creationdate="20150221T103909Z">
+        <seg>下面的代码将抛出一个 ``RuntimeException（运行时异常）`` 因为在路由中 ``foo``</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The framework injects the ``Request`` object in the
+controller if a variable is type-hinted with
+:class:`Symfony\\Component\\HttpFoundation\\Request`::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T111350Z" creationid="Harry" creationdate="20150224T111350Z">
+        <seg>如果一个变量被使用 :class:`Symfony\\Component\\HttpFoundation\\Request` 进行类型约束，框架就会将 ``请求`` 对象注入控制器中::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The framework takes care of all the repetitive stuff: you just need to write
+your custom code in the controller function:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T120218Z" creationid="Harry" creationdate="20150220T120218Z">
+        <seg>框架将接管所有重复的活动，这意味着你只需要把你自己的特有的代码写入控制器的函数即可：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The goal of a controller is always the same: create and return a ``Response``
+object.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T113841Z" creationid="Harry" creationdate="20150220T113754Z">
+        <seg>控制器的目标永远都是明确的：创建并返回一个 ``Response`` 对象。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The name (``notice``) isn't significant -
+it's just something you invent and reference next.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T125929Z" creationid="Harry" creationdate="20150223T125836Z">
+        <seg>名字（上面的例子里是``notice``）并没有特殊的意义，只是个你起的名字，方便你在下一步中使用它。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The new controller returns a simple HTML page.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134149Z" creationid="Harry" creationdate="20150220T134149Z">
+        <seg>这个新控制器返回一个简单的 HTML 页面。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The only requirement for a controller is to return a ``Response`` object.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T132625Z" creationid="Harry" creationdate="20150223T132625Z">
+        <seg>对控制器的要求只有一个：返回一个 ``Response`` 对象。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The response could be an HTML page, an XML document,
+a serialized JSON array, an image, a redirect, a 404 error or anything else
+you can dream up.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150219T154912Z" creationid="Harry" creationdate="20150219T154518Z">
+        <seg> 响应可以是一个 HTML 页面，可以是一个 XML 文件，或是一个序列化了的 JSON 数组，或是一张图片，也可以是一个重定向甚至一个 404 错误，它可以是你能想到的一切！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The target
+controller method would look something like this::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T113113Z" creationid="Harry" creationdate="20150224T113113Z">
+        <seg>目标控制器可以像下面这样工作::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There are also special classes to make certain kinds of responses easier:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T154042Z" creationid="Harry" creationdate="20150223T154042Z">
+        <seg>也有一些可以简单快速地创建其他类型的响应的类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There is a lot more information about the Request object</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T111806Z" creationid="Harry" creationdate="20150224T111806Z">
+        <seg>在足见的文档里还有很多关于请求对象的</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There is a lot more information about the Response object</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T110454Z" creationid="Harry" creationdate="20150224T110454Z">
+        <seg>在足见的文档里还有很多关于响应对象的</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There's no magic and no other requirements to worry about!</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T114549Z" creationid="Harry" creationdate="20150220T114549Z">
+        <seg>这里面没有魔法，也没有需要你担心的其他需求~</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These
+are used for rendering templates, sending emails, querying the database and
+any other "work" you can think of.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120443Z" creationid="Harry" creationdate="20150223T120443Z">
+        <seg>这些服务被用来渲染模板、发送邮件、查询数据库，也可以用来做一些你想让它们“做”的工作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These are just shortcuts to using core Symfony functionality that's
+available to you with or without the use of the base ``Controller`` class.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T133107Z" creationid="Harry" creationdate="20150222T133107Z">
+        <seg>这只是一些使用 Symfony 核心功能的快捷方法，这些核心功能无论你是否使用 ``Controller`` 基类都可用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These attributes will remain on the user for the remainder of that user's
+session.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T124601Z" creationid="Harry" creationdate="20150223T124601Z">
+        <seg>这些属性将持续到用户其余的请求中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These types of messages are called "flash" messages.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T125203Z" creationid="Harry" creationdate="20150223T125203Z">
+        <seg>这种消息被称为“闪电”消息。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>They're designed to be used across redirects exactly as
+you've done in this example.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T131904Z" creationid="Harry" creationdate="20150223T131904Z">
+        <seg>像刚才这样在重定向时传递消息就可以用到闪电消息。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This controller is pretty straightforward:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T124337Z" creationid="Harry" creationdate="20150220T124337Z">
+        <seg>这个控制器相当明了：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This doesn't actually change anything about how your controller works: it
+just gives you access to helper methods that the base controller class makes
+available.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T131858Z" creationid="Harry" creationdate="20150222T131858Z">
+        <seg>这并不会实际地修改你控制器工作的任何部分：它只是可以让你访问基类提供的帮手方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is a convention</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T125148Z" creationid="Harry" creationdate="20150220T125110Z">
+        <seg>这个规范</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is optional, but can give you more control over the exact objects/dependencies</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T133747Z" creationid="Harry" creationdate="20150222T133747Z">
+        <seg>这是可选的，但可以让你更精确地控制注入到你控制器中的</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is useful when processing a form:
+you want to redirect and have a special message shown on the *next* page.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T125059Z" creationid="Harry" creationdate="20150223T125059Z">
+        <seg>这在处理表格时很有用：你想将用户重定向并在 *下一个* 页面中显示一条特定的消息。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This renders a page that prints the famous ``Hello world!``::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T113625Z" creationid="Harry" creationdate="20150220T113625Z">
+        <seg>这是一个渲染著名的 ``Hello world!`` 页面的控制器::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This same idea is used when embedding controllers
+into templates (see :ref:`templating-embedding-controller`).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T113037Z" creationid="Harry" creationdate="20150224T113037Z">
+        <seg>在将控制器嵌入模板时也会用到这一方法（参阅 :ref:`templating-embedding-controller`）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Though not usually</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T104653Z" creationid="Harry" creationdate="20150221T104653Z">
+        <seg>虽然并不经常</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Though not very common, you can also forward to another controller internally
+with the :method:`Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller::forward`
+method.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T112109Z" creationid="Harry" creationdate="20150224T112109Z">
+        <seg>虽然不是很常用，但你还是可以使用 :method:`Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller::forward` 这一方法来在内部重定向到别的控制器。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Though similarly named, a "front controller" is different from the</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T121656Z" creationid="Harry" creationdate="20150220T121457Z">
+        <seg>虽然名字很像，但“前端控制器”和本章讨论的“控制器”</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To
+perform a 301 (permanent) redirect, modify the second argument::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T134828Z" creationid="Harry" creationdate="20150222T134828Z">
+        <seg>要想生成 301（永久）重定向，请修改第二个参数 ::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To actually view this page
+in your browser, you need to create a route, which maps a specific URL path
+to the controller:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134404Z" creationid="Harry" creationdate="20150220T134404Z">
+        <seg>要想真正地访问这个页面，你需要创建一条将指定 URL 路径映射到对应控制器的路由：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To do that, see the
+":doc:`/cookbook/controller/error_pages`" cookbook recipe.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T123044Z" creationid="Harry" creationdate="20150223T123044Z">
+        <seg>为达到目的，请参阅技巧书中的 ":doc:`/cookbook/controller/error_pages`" 这一技巧。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To do this, you'll throw a special type of exception.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T121356Z" creationid="Harry" creationdate="20150223T121356Z">
+        <seg>为了达到目的，你可以抛出一个特殊的异常。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To get it in your controller, just add it as an argument and
+**type-hint it with the Request class**::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T125108Z" creationid="Harry" creationdate="20150222T125108Z">
+        <seg>如果想在你的控制器中使用它，只需要将它添加为参数并 **使用Request 类对其进行类型约束（Type-Hint）** ::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To make life easier, you can choose to extend a base ``Controller`` class,
+which contains shortcut methods for many common controller tasks.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T114350Z" creationid="Harry" creationdate="20150224T114350Z">
+        <seg>简单起见，你可以选择继承 ``Controller`` 基类，它包含了很多控制器要做的基本的事情的快捷方式。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Typically, the controller class</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T124108Z" creationid="Harry" creationdate="20150220T124108Z">
+        <seg>一般情况下，控制器类</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Want to know more about getting information from the request?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T125231Z" creationid="Harry" creationdate="20150222T125231Z">
+        <seg>想学习关于从请求中获取信息的更多？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What if you need to read query parameters, grab a request header or get access
+to an uploaded file?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T124208Z" creationid="Harry" creationdate="20150222T124208Z">
+        <seg>假设你需要读取一个查询参数，抓取一个请求头，或者访问一个被上传上来的文件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What other services exist?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120834Z" creationid="Harry" creationdate="20150223T120834Z">
+        <seg>那么别的服务在哪儿呢？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What's
+more interesting is the argument that is passed to that method::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T110838Z" creationid="Harry" creationdate="20150224T110838Z">
+        <seg>更有趣的东西是传入那个方法的参数::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What's more interesting is the argument
+that is passed to that method::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T102013Z" creationid="Harry" creationdate="20150221T102013Z">
+        <seg>更有趣的东西是传入方法的参数::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When executing your controller, Symfony matches each argument with a parameter
+from the route.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T102553Z" creationid="Harry" creationdate="20150221T102553Z">
+        <seg>当你的控制器被执行时，Symfony 会将控制器的参数与路由占位符一一对应。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When extending the base controller class, you can access any Symfony service
+via the ``get()`` method.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120709Z" creationid="Harry" creationdate="20150223T120709Z">
+        <seg>当你继承了控制器基类时，你就可以通过 ``get()`` 方法来访问任何的 Symfony 服务。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When things are not found, you should play well with the HTTP protocol and
+return a 404 response.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T121233Z" creationid="Harry" creationdate="20150223T121233Z">
+        <seg>当没有找到一些东西事，你应该用好 HTTP 协议并返回一个 404 响应。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When you install a new bundle, it probably
+brings in even *more* services.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120609Z" creationid="Harry" creationdate="20150223T120609Z">
+        <seg>当你安装新的包时，它可能会引入 *更多的* 服务。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Whenever you create a page, you'll ultimately need to write some code that
+contains the logic for that page.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T113846Z" creationid="Harry" creationdate="20150224T113846Z">
+        <seg>不论在什么时候，当你创建一个页面时，你最终都需要写一些包括这个页面的逻辑的代码。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>While a controller can be any PHP callable (a function, method on an object,
+or a ``Closure``), a controller is usually a method inside a controller class.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T123257Z" creationid="Harry" creationdate="20150220T122520Z">
+        <seg>虽然刚才说到控制器可以是任何一段可以被调用的 PHP 代码（比如一个函数、对象中的方法或者一个 ``Closure（闭包）``），但控制器一般都是控制器类中的一个方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You already know that the route points to the
+``HelloController::indexAction()`` method that lives inside AppBundle.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T110800Z" creationid="Harry" creationdate="20150224T110800Z">
+        <seg>你已经知道了路由指向了 AppBundle 中的 ``HelloController::indexAction()`` 方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You already know that the route points to the ``HelloController::indexAction()`` method
+that lives inside ``AppBundle``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T101936Z" creationid="Harry" creationdate="20150221T101936Z">
+        <seg>你已经知道了路由指向了 ``AppBundle`` 中的 ``HelloController::indexAction()`` 方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can also</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T105241Z" creationid="Harry" creationdate="20150221T105241Z">
+        <seg>你也可以</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can also put templates in deeper sub-directories.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T115432Z" creationid="Harry" creationdate="20150223T115432Z">
+        <seg>你也可以将模板文件放入更深的子文件夹中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can also put templates in the ``Resources/views`` directory of a</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120014Z" creationid="Harry" creationdate="20150223T120002Z">
+        <seg>你也可以将模板放入一个包内的 ``Resources/views`` 目录下，</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can also store small messages that will be stored on the user's session
+for exactly one additional request.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T124907Z" creationid="Harry" creationdate="20150223T124907Z">
+        <seg>你也可以向用户会话存储一条只在紧接着的下一个请求中可用的短消息。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can create a static page without even creating a controller (only a route
+and template are needed).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T111933Z" creationid="Harry" creationdate="20150224T111933Z">
+        <seg>你也可以创建一个不需要控制器的静态页面（只需要路由和模板）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can learn much more about the routing system in the</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T143144Z" creationid="Harry" creationdate="20150220T143144Z">
+        <seg>你可以从 :doc:`Routing chapter &lt;/book/routing&gt;` 更详细地学习路由系统。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can list all services, use the ``container:debug``
+console command:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120935Z" creationid="Harry" creationdate="20150223T120935Z">
+        <seg>你可以用 ``container:debug`` 这个控制台命令列出所有的服务：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You'll learn how the route's placeholders (``{name}``) become arguments</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T133849Z" creationid="Harry" creationdate="20150220T133849Z">
+        <seg>你也将学到如何把路由中的占位符（这里是``{name}``）变成</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You'll likely never need to edit, view or worry</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122217Z" creationid="Harry" creationdate="20150220T122217Z">
+        <seg>你基本不需要编辑、浏览或者担心</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You'll want to customize the error page your user sees.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T122440Z" creationid="Harry" creationdate="20150223T122440Z">
+        <seg>你一定想自定义终端用户看到的错误页面。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>_`Controller class`: https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T114808Z" creationid="Harry" creationdate="20150224T114808Z">
+        <seg>_`Controller class`: https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>_book-controller-request-argument:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T105452Z" creationid="Harry" creationdate="20150221T105452Z">
+        <seg>_book-controller-request-argument:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>_controller-accessing-services:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120230Z" creationid="Harry" creationdate="20150223T120230Z">
+        <seg>_controller-accessing-services:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>_controller-rendering-templates:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T114903Z" creationid="Harry" creationdate="20150223T114903Z">
+        <seg>_controller-rendering-templates:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>_route-parameters-controller-arguments:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T143228Z" creationid="Harry" creationdate="20150220T143228Z">
+        <seg>_route-parameters-controller-arguments:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>``AppBundle:Hello:index.html.twig`` would refer to the template located in</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120157Z" creationid="Harry" creationdate="20150223T120157Z">
+        <seg>``AppBundle:Hello:index.html.twig`` 代表的是 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>``BundleName:DirectoryName:FileName`` syntax.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120117Z" creationid="Harry" creationdate="20150223T120117Z">
+        <seg>``包名:目录名:文件名`` 这样的表达式来使用它。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>``Response`` class, which the controller must return.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T124731Z" creationid="Harry" creationdate="20150220T124731Z">
+        <seg>控制器必须返回的 ``Response`` 类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>``src/AppBundle/Resources/views/Hello/index.html.twig``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120205Z" creationid="Harry" creationdate="20150223T120205Z">
+        <seg>``src/AppBundle/Resources/views/Hello/index.html.twig`` 这个模板文件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>a ``Response`` object that redirects the client's browser to the contact</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T115715Z" creationid="Harry" creationdate="20150220T115715Z">
+        <seg>一个 ``Response`` 对象来把用户的浏览器重定向到</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>a route that matches that information, and reads the ``_controller`` parameter</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T120739Z" creationid="Harry" creationdate="20150220T120739Z">
+        <seg>寻找一条符合这个信息的路由，然后读取路由信息中的 ``_controller`` </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>a special shortcut syntax: ``AppBundle:Hello:index``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T142836Z" creationid="Harry" creationdate="20150220T142836Z">
+        <seg>表达式来定位一个控制器： ``AppBundle:Hello:index``。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>about the front controllers in your application.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122306Z" creationid="Harry" creationdate="20150220T122306Z">
+        <seg>你的程序中前端控制器的代码。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>all requests are directed.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T121857Z" creationid="Harry" creationdate="20150220T121857Z">
+        <seg>所有的请求都被指向它。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>and is referenced in the routing configuration by the action's name (``index``).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T130014Z" creationid="Harry" creationdate="20150220T125744Z">
+        <seg>这样你就可以在配置路由时只写动作本身的名字（这里是 ``index`` ）了。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>blog entry from the database and create a ``Response`` object displaying</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T115141Z" creationid="Harry" creationdate="20150220T115141Z">
+        <seg>博客的条目然后创建一个 ``Response`` 对象来把博客的内容显示</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>bundle and reference them with a</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120025Z" creationid="Harry" creationdate="20150223T120025Z">
+        <seg>并使用</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>by the naming: a *controller class* is simply a convenient way to group</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T123851Z" creationid="Harry" creationdate="20150220T123851Z">
+        <seg>*控制器类* 这个名字搞糊涂了，这只是一种将几个</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>class (i.e. ``Hello``) and the word ``Controller``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T125014Z" creationid="Harry" creationdate="20150220T124947Z">
+        <seg>（比如 ``Hello``）后面加上 ``Controller`` 这个单词构成的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>class HelloController</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T123422Z" creationid="Harry" creationdate="20150220T123422Z">
+        <seg>class HelloController</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>class HelloController extends Controller</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T131237Z" creationid="Harry" creationdate="20150222T131237Z">
+        <seg>class HelloController extends Controller</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>code-block:: bash</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120938Z" creationid="Harry" creationdate="20150223T120938Z">
+        <seg>code-block:: bash</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>code-block:: html+jinja</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T130859Z" creationid="Harry" creationdate="20150223T130859Z">
+        <seg>code-block:: html+jinja</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>code-block:: html+php</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T130924Z" creationid="Harry" creationdate="20150223T130924Z">
+        <seg>code-block:: html+php</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>code-block:: php</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T123352Z" creationid="Harry" creationdate="20150220T123352Z">
+        <seg>code-block:: php</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>code-block:: php-annotations</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134414Z" creationid="Harry" creationdate="20150220T134414Z">
+        <seg>code-block:: php-annotations</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>code-block:: xml</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134612Z" creationid="Harry" creationdate="20150220T134612Z">
+        <seg>code-block:: xml</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>code-block:: yaml</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134440Z" creationid="Harry" creationdate="20150220T134440Z">
+        <seg>code-block:: yaml</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>configuration-block::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134407Z" creationid="Harry" creationdate="20150220T134407Z">
+        <seg>configuration-block::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>controller creates and returns a ``Response`` object;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T120918Z" creationid="Harry" creationdate="20150220T120918Z">
+        <seg>创建并返回一个 ``Response`` 对象；</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>defaults:  { _controller: AppBundle:Hello:index }</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134555Z" creationid="Harry" creationdate="20150220T134555Z">
+        <seg>defaults:  { _controller: AppBundle:Hello:index }</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>etc).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T124244Z" creationid="Harry" creationdate="20150220T124244Z">
+        <seg>等等）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>example would not throw an exception::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T104213Z" creationid="Harry" creationdate="20150221T104213Z">
+        <seg>例子就不会抛出异常::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>for the homepage of the site.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T114846Z" creationid="Harry" creationdate="20150220T114846Z">
+        <seg>网站主页的内容。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>form "thank you" page.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T115746Z" creationid="Harry" creationdate="20150220T115746Z">
+        <seg>表单的“谢谢您”页面。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>from the route;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T120745Z" creationid="Harry" creationdate="20150220T120745Z">
+        <seg>参数；</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>front controller (e.g. ``app.php``) and a development front controller</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122124Z" creationid="Harry" creationdate="20150220T121949Z">
+        <seg>前端控制器（比如 ``app.php``）和一个开发环境前端控制器。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>hello:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134449Z" creationid="Harry" creationdate="20150220T134449Z">
+        <seg>hello:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>http://symfony.com/schema/routing/routing-1.0.xsd"&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134626Z" creationid="Harry" creationdate="20150220T134626Z">
+        <seg>http://symfony.com/schema/routing/routing-1.0.xsd"&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>if (!$product) {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T121544Z" creationid="Harry" creationdate="20150223T121544Z">
+        <seg>if (!$product) {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>if ($form-&gt;isValid()) {</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T125245Z" creationid="Harry" creationdate="20150223T125245Z">
+        <seg>if ($form-&gt;isValid()) {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>in the component documentation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T110500Z" creationid="Harry" creationdate="20150224T110500Z">
+        <seg>信息。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>index::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122907Z" creationid="Harry" creationdate="20150220T122907Z">
+        <seg>index::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>inside a *controller class* (``HelloController``).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T123730Z" creationid="Harry" creationdate="20150220T123730Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>is a short PHP file that lives in your web directory and through which</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T121829Z" creationid="Harry" creationdate="20150220T121829Z">
+        <seg>在你网站目录下的一个短小的 PHP 文件，</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>namespace AppBundle\Controller;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T123406Z" creationid="Harry" creationdate="20150220T123406Z">
+        <seg>namespace AppBundle\Controller;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>namespace the entire controller class.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T124552Z" creationid="Harry" creationdate="20150220T124552Z">
+        <seg>命名整个控制器类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>note::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T123003Z" creationid="Harry" creationdate="20150220T123003Z">
+        <seg>note::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>object that specializes in redirecting the user.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T114822Z" creationid="Harry" creationdate="20150223T114822Z">
+        <seg>类的快捷方式。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>on the controller format, see :ref:`controller-string-syntax`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T143017Z" creationid="Harry" creationdate="20150220T143017Z">
+        <seg>控制器定位表达式，请参阅 :ref:`controller-string-syntax`。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>only by the first part of the name (i.e. ``Hello``) in the routing configuration.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T125353Z" creationid="Harry" creationdate="20150220T125340Z">
+        <seg>类名的第一个部分 （在这里是 ``Hello``）来配置路由。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>or ``app_dev.php``) that bootstraps the application;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T120402Z" creationid="Harry" creationdate="20150220T120402Z">
+        <seg>或 ``app_dev.php``）；</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>parameter defined in the route::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T103925Z" creationid="Harry" creationdate="20150221T103925Z">
+        <seg>这个占位符没有被定义::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>pass other variables from your route to your controller arguments.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T105420Z" creationid="Harry" creationdate="20150221T105420Z">
+        <seg>你也可以将其他来自你的路由的变量传入控制器。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>path:      /hello/{firstName}/{lastName}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T102659Z" creationid="Harry" creationdate="20150221T102659Z">
+        <seg>path:      /hello/{firstName}/{lastName}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>path:      /hello/{name}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134452Z" creationid="Harry" creationdate="20150220T134452Z">
+        <seg>path:      /hello/{name}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public function fancyAction($name, $color)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T113117Z" creationid="Harry" creationdate="20150224T113117Z">
+        <seg>public function fancyAction($name, $color)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public function helloAction()</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122703Z" creationid="Harry" creationdate="20150220T122703Z">
+        <seg>public function helloAction()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public function indexAction($firstName)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T104454Z" creationid="Harry" creationdate="20150221T104454Z">
+        <seg>public function indexAction($firstName)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public function indexAction($firstName, $lastName)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T102653Z" creationid="Harry" creationdate="20150221T102653Z">
+        <seg>public function indexAction($firstName, $lastName)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public function indexAction($firstName, $lastName, $foo = 'bar')</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T104218Z" creationid="Harry" creationdate="20150221T104218Z">
+        <seg>public function indexAction($firstName, $lastName, $foo = 'bar')</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public function indexAction($firstName, $lastName, $foo)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T103928Z" creationid="Harry" creationdate="20150221T103928Z">
+        <seg>public function indexAction($firstName, $lastName, $foo)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public function indexAction($firstName, $lastName, Request $request)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T125133Z" creationid="Harry" creationdate="20150222T125133Z">
+        <seg>public function indexAction($firstName, $lastName, Request $request)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public function indexAction($lastName, $firstName)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T103628Z" creationid="Harry" creationdate="20150221T103628Z">
+        <seg>public function indexAction($lastName, $firstName)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public function indexAction($name)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T123426Z" creationid="Harry" creationdate="20150220T123426Z">
+        <seg>public function indexAction($name)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public function indexAction()</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T133920Z" creationid="Harry" creationdate="20150222T133920Z">
+        <seg>public function indexAction()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public function indexAction(Request $request)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T123828Z" creationid="Harry" creationdate="20150223T123828Z">
+        <seg>public function indexAction(Request $request)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>public function updateAction(Request $request)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T125237Z" creationid="Harry" creationdate="20150223T125237Z">
+        <seg>public function updateAction(Request $request)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>reordered and still work perfectly::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T103622Z" creationid="Harry" creationdate="20150221T103622Z">
+        <seg>重新排序而且仍然可以完美运行::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>return $collection;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134756Z" creationid="Harry" creationdate="20150220T134756Z">
+        <seg>return $collection;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>return $response;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T112530Z" creationid="Harry" creationdate="20150224T112530Z">
+        <seg>return $response;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>return $this-&gt;redirect($this-&gt;generateUrl('homepage'));</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T133926Z" creationid="Harry" creationdate="20150222T133926Z">
+        <seg>return $this-&gt;redirect($this-&gt;generateUrl('homepage'));</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>return $this-&gt;redirect($this-&gt;generateUrl('homepage'), 301);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T134831Z" creationid="Harry" creationdate="20150222T134831Z">
+        <seg>return $this-&gt;redirect($this-&gt;generateUrl('homepage'), 301);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>return $this-&gt;redirect($this-&gt;generateUrl(...));</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T125335Z" creationid="Harry" creationdate="20150223T125335Z">
+        <seg>return $this-&gt;redirect($this-&gt;generateUrl(...));</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>return $this-&gt;render('Hello/Greetings/index.html.twig', array('name' =&gt; $name));</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T115557Z" creationid="Harry" creationdate="20150223T115557Z">
+        <seg>return $this-&gt;render('Hello/Greetings/index.html.twig', array('name' =&gt; $name));</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>return $this-&gt;render('Hello/index.html.twig', array('name' =&gt; $name));</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T115402Z" creationid="Harry" creationdate="20150223T115402Z">
+        <seg>return $this-&gt;render('Hello/index.html.twig', array('name' =&gt; $name));</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>return $this-&gt;render(...);</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T121613Z" creationid="Harry" creationdate="20150223T121613Z">
+        <seg>return $this-&gt;render(...);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>return new RedirectResponse($this-&gt;generateUrl('homepage'));</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T114853Z" creationid="Harry" creationdate="20150223T114853Z">
+        <seg>return new RedirectResponse($this-&gt;generateUrl('homepage'));</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>return new Response('&lt;html&gt;&lt;body&gt;Hello '.$name.'!&lt;/body&gt;&lt;/html&gt;');</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T123429Z" creationid="Harry" creationdate="20150220T123429Z">
+        <seg>return new Response('&lt;html&gt;&lt;body&gt;Hello '.$name.'!&lt;/body&gt;&lt;/html&gt;');</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>return new Response('Hello world!');</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122729Z" creationid="Harry" creationdate="20150220T122729Z">
+        <seg>return new Response('Hello world!');</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>returns a ``Response`` object with a 404 status code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T115333Z" creationid="Harry" creationdate="20150220T115333Z">
+        <seg>包含 404 状态码的 ``Response`` 对象并把它发送回客户端。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>seealso::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T143025Z" creationid="Harry" creationdate="20150220T143025Z">
+        <seg>seealso::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>several controllers/actions together.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T133712Z" creationid="Harry" creationdate="20150220T124011Z">
+        <seg>控制器（方法）组合在一起的简便方法而已。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>sidebar:: Referencing Templates that Live inside the Bundle</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T115931Z" creationid="Harry" creationdate="20150223T115931Z">
+        <seg>sidebar:: 使用储存在包内部的模板</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>sidebar:: The AppBundle:Hello:index controller syntax</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T135814Z" creationid="Harry" creationdate="20150220T135641Z">
+        <seg>sidebar:: 类似 AppBundle:Hello:index 这样的表达式的语法</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Controller</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122909Z" creationid="Harry" creationdate="20150220T122909Z">
+        <seg>single: Controller</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Controller; 404 pages</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T121039Z" creationid="Harry" creationdate="20150223T121039Z">
+        <seg>single: Controller; 404 pages</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Controller; Accessing services</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T120225Z" creationid="Harry" creationdate="20150223T120225Z">
+        <seg>single: Controller; Accessing services</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Controller; Base controller class</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T110853Z" creationid="Harry" creationdate="20150224T110853Z">
+        <seg>single: Controller; Base controller class</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Controller; Controller arguments</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T143220Z" creationid="Harry" creationdate="20150220T143220Z">
+        <seg>single: Controller; Controller arguments</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Controller; Forwarding</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T111944Z" creationid="Harry" creationdate="20150224T111944Z">
+        <seg>single: Controller; Forwarding</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Controller; Managing errors</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T121034Z" creationid="Harry" creationdate="20150223T121034Z">
+        <seg>single: Controller; Managing errors</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Controller; Redirecting</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T133811Z" creationid="Harry" creationdate="20150222T133811Z">
+        <seg>single: Controller; Redirecting</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Controller; Rendering templates</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T114859Z" creationid="Harry" creationdate="20150223T114859Z">
+        <seg>single: Controller; Rendering templates</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Controller; Request object</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T110514Z" creationid="Harry" creationdate="20150224T110514Z">
+        <seg>single: Controller; Request object</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Controller; Request-controller-response lifecycle</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122951Z" creationid="Harry" creationdate="20150220T122951Z">
+        <seg>single: Controller; Request-controller-response lifecycle</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Controller; Response object</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T131909Z" creationid="Harry" creationdate="20150223T131909Z">
+        <seg>single: Controller; Response object</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Controller; Routes and controllers</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134034Z" creationid="Harry" creationdate="20150220T134034Z">
+        <seg>single: Controller; Routes and controllers</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Controller; Simple example</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T123008Z" creationid="Harry" creationdate="20150220T123008Z">
+        <seg>single: Controller; Simple example</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Controller; The session</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T123105Z" creationid="Harry" creationdate="20150223T123105Z">
+        <seg>single: Controller; The session</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Forms</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150224T121757Z" creationid="Harry" creationdate="20150224T121757Z">
+        <seg>single: Forms</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Session</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T123111Z" creationid="Harry" creationdate="20150223T123111Z">
+        <seg>single: Session</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>single: Session; Flash messages</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T124605Z" creationid="Harry" creationdate="20150223T124605Z">
+        <seg>single: Session; Flash messages</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>that are injected into your controller.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T133804Z" creationid="Harry" creationdate="20150222T133804Z">
+        <seg>类或者依赖。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>that blog.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T115148Z" creationid="Harry" creationdate="20150220T115148Z">
+        <seg>出来。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>that provides consistency to controllers and allows them to be referenced</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T125248Z" creationid="Harry" creationdate="20150220T125137Z">
+        <seg>保持控制器的一致性并且将允许你只使用</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>the client.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T121027Z" creationid="Harry" creationdate="20150220T121027Z">
+        <seg>客户端。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>the database and emails the contact information to you.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T115634Z" creationid="Harry" creationdate="20150220T115634Z">
+        <seg>数据库中并给你发送一封包含联系信息的电子邮件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>the form information from the request, saves the contact information to</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T115558Z" creationid="Harry" creationdate="20150220T115551Z">
+        <seg>用户请求中读取信息，存储在</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>the name of the route that was matched (e.g. ``hello``).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T104627Z" creationid="Harry" creationdate="20150221T104627Z">
+        <seg>被命中的路由的名字（比如在这里是 ``hello``）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>this base class, check out :doc:`Controllers as Services &lt;/cookbook/controller/service&gt;`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T133545Z" creationid="Harry" creationdate="20150222T133545Z">
+        <seg>这个基类时如何工作，请参阅 :doc:`Controllers as Services &lt;/cookbook/controller/service&gt;`。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>throw $this-&gt;createNotFoundException('The product does not exist');</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T121610Z" creationid="Harry" creationdate="20150223T121610Z">
+        <seg>throw $this-&gt;createNotFoundException('产品不存在');</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>throw new \Exception('Something went wrong!');</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T122109Z" creationid="Harry" creationdate="20150223T122109Z">
+        <seg>throw new \Exception('出错了！');</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tip::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T123432Z" creationid="Harry" creationdate="20150220T123432Z">
+        <seg>tip::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>to the action method (``$name``).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T133946Z" creationid="Harry" creationdate="20150220T133946Z">
+        <seg>动作的方法的参数（这里是``$name``）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134421Z" creationid="Harry" creationdate="20150220T134421Z">
+        <seg>use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>use Symfony\Bundle\FrameworkBundle\Controller\Controller;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T131230Z" creationid="Harry" creationdate="20150222T131230Z">
+        <seg>use Symfony\Bundle\FrameworkBundle\Controller\Controller;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>use Symfony\Component\HttpFoundation\RedirectResponse;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T114846Z" creationid="Harry" creationdate="20150223T114846Z">
+        <seg>use Symfony\Component\HttpFoundation\RedirectResponse;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>use Symfony\Component\HttpFoundation\Request;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T125118Z" creationid="Harry" creationdate="20150222T125118Z">
+        <seg>use Symfony\Component\HttpFoundation\Request;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>use Symfony\Component\HttpFoundation\Response;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122553Z" creationid="Harry" creationdate="20150220T122553Z">
+        <seg>use Symfony\Component\HttpFoundation\Response;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>use Symfony\Component\Routing\Route;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134713Z" creationid="Harry" creationdate="20150220T134713Z">
+        <seg>use Symfony\Component\Routing\Route;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>use Symfony\Component\Routing\RouteCollection;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134715Z" creationid="Harry" creationdate="20150220T134715Z">
+        <seg>use Symfony\Component\Routing\RouteCollection;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>useful, this is also available as a controller argument.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T105234Z" creationid="Harry" creationdate="20150221T105234Z">
+        <seg>用到,，它同样可以被用于一个控制器参数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>will house several controllers/actions (e.g. ``updateAction``, ``deleteAction``,</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T124220Z" creationid="Harry" creationdate="20150220T124220Z">
+        <seg>里面会有一些控制器（比如 ``updateAction``、``deleteAction`` </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134621Z" creationid="Harry" creationdate="20150220T134621Z">
+        <seg>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>xsi:schemaLocation="http://symfony.com/schema/routing</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T134624Z" creationid="Harry" creationdate="20150220T134624Z">
+        <seg>xsi:schemaLocation="http://symfony.com/schema/routing</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>you could omit it entirely::</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T104451Z" creationid="Harry" creationdate="20150221T104451Z">
+        <seg>你可以完全忽略掉它::</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>{</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122708Z" creationid="Harry" creationdate="20150220T122708Z">
+        <seg>{</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>{% endfor %}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T130921Z" creationid="Harry" creationdate="20150223T130921Z">
+        <seg>{% endfor %}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>{% for flashMessage in app.session.flashbag.get('notice') %}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T130908Z" creationid="Harry" creationdate="20150223T130908Z">
+        <seg>{% for flashMessage in app.session.flashbag.get('notice') %}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>{{ flashMessage }}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T130915Z" creationid="Harry" creationdate="20150223T130915Z">
+        <seg>{{ flashMessage }}</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>}</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T122734Z" creationid="Harry" creationdate="20150220T122734Z">
+        <seg>}</seg>
+      </tuv>
+    </tu>
+<!-- Alternative translations -->
+  </body>
+</tmx>
