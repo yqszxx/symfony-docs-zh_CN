@@ -1186,14 +1186,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>&lt;!-- ...</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T135505Z" creationid="Harry" creationdate="20150307T135505Z">
-        <seg>&lt;!-- ...</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
         <seg>&lt;!-- app/Resources/views/Blog/list.html.php --&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="Harry" changedate="20150227T132354Z" creationid="Harry" creationdate="20150227T132354Z">
@@ -1714,15 +1706,6 @@ HTTP request and constructs and returns an HTTP response (as a Symfony
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>A full list can be found
-on Wikipedia's `List of HTTP status codes`_ article.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T141036Z" creationid="Harry" creationdate="20150307T141036Z">
-        <seg>完整的列表可以在维基百科的 `List of HTTP status codes`_ （英文）页面查看。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
         <seg>A good selection of Symfony community tools can be found on `KnpBundles.com`_.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="Harry" changedate="20150227T140638Z" creationid="Harry" creationdate="20150227T140638Z">
@@ -2122,23 +2105,6 @@ let you take back control of your code.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Consider the response
-from the xkcd web server:</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T135248Z" creationid="Harry" creationdate="20150307T135248Z">
-        <seg>如，xkcd 服务端返回的响应：</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Content-Type: text/html</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T135454Z" creationid="Harry" creationdate="20150307T135454Z">
-        <seg>Content-Type: text/html</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
         <seg>Controller
 ==========</seg>
       </tuv>
@@ -2216,24 +2182,6 @@ maps a URL to that controller (#2).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="Harry" changedate="20150303T125337Z" creationid="Harry" creationdate="20150303T125337Z">
         <seg>DELETE /blog/15 HTTP/1.1</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Date: Sat, 02 Apr 2011 21:05:05 GMT</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T135447Z" creationid="Harry" creationdate="20150307T135447Z">
-        <seg>Date: Sat, 02 Apr 2011 21:05:05 GMT</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Different
-status codes exist that indicate success, an error, or that the client needs
-to do something (e.g. redirect to another page).</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T140947Z" creationid="Harry" creationdate="20150307T140947Z">
-        <seg>不同的状态码代表成功、错误或者告诉客户端需要做一些其他的事（如重定向到另外一个页面）。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2396,24 +2344,6 @@ the page to crash.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>For example, in the case of a GET request, the server
-prepares the resource and returns it in an HTTP response.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T135124Z" creationid="Harry" creationdate="20150307T135124Z">
-        <seg>例如，对于一个 GET 请求，服务端将准备资源，并在 HTTP 响应中返回给客户端。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>For example, one important HTTP response header is
-``Content-Type``.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T141359Z" creationid="Harry" creationdate="20150307T141359Z">
-        <seg>比如，一种重要的响应头是 ``Content-Type`` 。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
         <seg>For example, the "routing" system is fickle, and wouldn't
 recognize that the list page (``/index.php``) should be accessible also via ``/``
 (if Apache rewrite rules were added).</seg>
@@ -2523,14 +2453,6 @@ requests internally based on the full URI.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>HTML for the xkcd comic --&gt;</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T140450Z" creationid="Harry" creationdate="20150307T140450Z">
-        <seg> xkcd 漫画的 HTML 代码--&gt;</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
         <seg>HTTP (Hypertext Transfer Protocol to the geeks) is a text language that allows
 two machines to communicate with each other.</seg>
       </tuv>
@@ -2554,14 +2476,6 @@ two machines to communicate with each other.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="Harry" changedate="20150303T123754Z" creationid="Harry" creationdate="20150303T123754Z">
         <seg>HTTP 定义了这种简单的文本语言的。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>HTTP/1.1 200 OK</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T135443Z" creationid="Harry" creationdate="20150307T135443Z">
-        <seg>HTTP/1.1 200 OK</seg>
       </tuv>
     </tu>
     <tu>
@@ -3056,15 +2970,6 @@ object and are easily accessible.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Like the request, an HTTP response contains additional pieces of information
-known as HTTP headers.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T141259Z" creationid="Harry" creationdate="20150307T141221Z">
-        <seg>像请求一样，一个 HTTP 响应也在头部（我们把它叫做响应头）包含了一些附加的信息。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
         <seg>Making the argument optional, however, is perfectly ok.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="Harry" changedate="20150221T104144Z" creationid="Harry" creationdate="20150221T104144Z">
@@ -3096,8 +3001,8 @@ known as HTTP headers.</seg>
         <seg>Many other headers exist and can be found
 on Wikipedia's `List of HTTP header fields`_ article.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T134558Z" creationid="Harry" creationdate="20150303T150425Z">
-        <seg>还有许多其它的请求头可以承载的信息，你可以在维基百科的 `List of HTTP header fields`_ （英文）页面查看。</seg>
+      <tuv lang="ZH-CN" changeid="Harry" changedate="20150303T150425Z" creationid="Harry" creationdate="20150303T150425Z">
+        <seg>还有许多其它的请求头可以承载的信息，你可以在维基百科的 `List of HTTP header fields`_ article.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3224,16 +3129,6 @@ Symfony will automatically return a 500 HTTP response code.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="Harry" changedate="20150223T122052Z" creationid="Harry" creationdate="20150223T122052Z">
         <seg>当然，你可以自由的从你的控制器中抛出任何 ``Exception（异常）`` 类——Symfony 将会自动的生成 HTTP 500（内部服务器错误）响应。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Once a server has received the request, it knows exactly which resource the
-client needs (via the URI) and what the client wants to do with that resource
-(via the method).</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T135032Z" creationid="Harry" creationdate="20150307T135032Z">
-        <seg>当服务端收到请求，它要明确地知道客户端需要哪个资源（通过 URI ）以及希望对该资源进行什么操作（通过 HTTP 方法）。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3368,14 +3263,6 @@ preferred programming language, this chapter is a **must-read** for everyone.</s
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Server: lighttpd/1.4.19</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T135451Z" creationid="Harry" creationdate="20150307T135451Z">
-        <seg>Server: lighttpd/1.4.19</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
         <seg>Simple, right?</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="Harry" changedate="20150220T135628Z" creationid="Harry" creationdate="20150220T135628Z">
@@ -3422,16 +3309,6 @@ a cleaned URI (always returning ``/show`` and never ``/index.php/show``).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="Harry" changedate="20150227T113130Z" creationid="Harry" creationdate="20150227T113130Z">
         <seg>具体来说， ``getPathInfo()`` 方法返回一个被清理过的的 URI（比如它会返回 ``/show`` ，而不会是 ``/index.php/show``）。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Step 2: The Server Returns a Response
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T134733Z" creationid="Harry" creationdate="20150307T134733Z">
-        <seg>第二步：服务端返回响应
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</seg>
       </tuv>
     </tu>
     <tu>
@@ -3701,15 +3578,6 @@ the resource:</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>The HTTP response contains the requested resource (the HTML content in this
-case), as well as other information about the response.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T140714Z" creationid="Harry" creationdate="20150307T140611Z">
-        <seg>HTTP 响应不但包含了客户端请求的资源（这里是 HTML 内容），也包含了与响应相关的信息。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
         <seg>The Request Object
 ------------------</seg>
       </tuv>
@@ -3900,17 +3768,6 @@ a simple application.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>The body of the same resource could be returned in multiple
-different formats like HTML, XML, or JSON and the ``Content-Type`` header uses
-Internet Media Types like ``text/html`` to tell the client which format is
-being returned.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T141934Z" creationid="Harry" creationdate="20150307T141934Z">
-        <seg>即使是相同的资源内容，因为可以用不同的格式返回，如 HTML 、 XML 或 JSON 。 ``Content-Type`` 使用类似 ``text/html`` 这样的互联网媒体类型（Internet Media Type）来告知客户端响应是什么格式的。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
         <seg>The client sends that request to a server,
 and then waits for the response.</seg>
       </tuv>
@@ -3983,16 +3840,6 @@ application* needs to render the content of a page.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="Harry" changedate="20150225T105726Z" creationid="Harry" creationdate="20150225T105726Z">
         <seg>使用 ``model.php`` 来命名刚才的新文件是因为程序逻辑和数据访问</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>The first line is
-especially important and contains the HTTP response status code (200 in this
-case).</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T140720Z" creationid="Harry" creationdate="20150307T140657Z">
-        <seg>第一行最重要，它是 HTTP 状态码（这里是 200 ）。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4152,15 +3999,6 @@ which *all* requests are processed.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="Harry" changedate="20150225T123824Z" creationid="Harry" creationdate="20150225T123824Z">
         <seg>现在，使用 :term:`front controller`: 来解救我们的程序吧，它是一个单独的 PHP 文件，我们可以通过它来处理 *所有* 的请求。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>The status code communicates the overall outcome of the request back
-to the client.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T140816Z" creationid="Harry" creationdate="20150307T140734Z">
-        <seg>状态码报告了请求被处理的结果，</seg>
       </tuv>
     </tu>
     <tu>
@@ -4548,15 +4386,6 @@ class.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Translated into HTTP, the response sent back to the browser will look something
-like this:</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T135438Z" creationid="Harry" creationdate="20150307T135438Z">
-        <seg>翻译成 HTTP 的语言，返回给客户端的响应看起来是这样的：</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
         <seg>True to the Symfony philosophy, this chapter begins by explaining the fundamental
 concept common to web development: HTTP.</seg>
       </tuv>
@@ -4611,22 +4440,6 @@ PHP functions (``ob_start()``, ``ob_get_clean()``) in the template.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="Harry" changedate="20150222T125231Z" creationid="Harry" creationdate="20150222T125231Z">
         <seg>想学习关于从请求中获取信息的更多？</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Was the request successful?</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T140830Z" creationid="Harry" creationdate="20150307T140830Z">
-        <seg>请求成功了？</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Was there an error?</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Harry" changedate="20150307T140837Z" creationid="Harry" creationdate="20150307T140837Z">
-        <seg>有错误吗？</seg>
       </tuv>
     </tu>
     <tu>
