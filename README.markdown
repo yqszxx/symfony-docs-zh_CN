@@ -10,6 +10,8 @@ Symfony 中文文档
 
 文档渲染状态：[<img src="https://readthedocs.org/projects/symfony-docs-zh-cn/badge/?version=latest" title="文档渲染状态">](https://readthedocs.org/projects/symfony-docs-zh-cn/?badge=latest)
 
+兼容性状态：[![兼容性状态](https://coveralls.io/repos/yqszxx/symfony-docs-zh_CN/badge.svg)](https://coveralls.io/r/yqszxx/symfony-docs-zh_CN)
+
 出一份力
 ---------------
 
